@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>رزومه — مریم رافتی حمایتی</title>
+    <title>پورتفولیو UX/UI — مریم رافتی حمایتی</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,15 +13,17 @@
     <style>
       @page {
         size: A4;
-        margin: 14mm 14mm 14mm 14mm;
+        margin: 12mm;
       }
 
       :root {
         --ink: #1a1715;
         --muted: #5c564f;
-        --line: #e4ddd6;
+        --line: #e0d8d0;
         --accent: #b4533a;
+        --accent-deep: #8f3f2c;
         --soft: #f7f2ee;
+        --soft-2: #fdf6f2;
       }
 
       * {
@@ -33,8 +35,8 @@
         font-family: "Vazirmatn", Tahoma, sans-serif;
         color: var(--ink);
         background: #fff;
-        font-size: 10.5pt;
-        line-height: 1.7;
+        font-size: 9.6pt;
+        line-height: 1.65;
         direction: rtl;
         text-align: right;
       }
@@ -44,142 +46,338 @@
         min-height: 297mm;
         margin: 0 auto;
         padding: 0;
+        page-break-after: always;
       }
 
-      header {
-        border-bottom: 2px solid var(--ink);
-        padding-bottom: 12px;
-        margin-bottom: 16px;
+      .page:last-child {
+        page-break-after: auto;
       }
 
       h1 {
         margin: 0;
-        font-size: 22pt;
-        line-height: 1.25;
+        font-size: 20pt;
+        line-height: 1.2;
         font-weight: 800;
       }
 
-      .title {
-        margin: 4px 0 10px;
-        color: var(--accent);
-        font-weight: 700;
-        font-size: 12pt;
-      }
-
-      .tagline {
-        margin: 0 0 10px;
-        color: var(--muted);
-        font-size: 10.5pt;
-      }
-
-      .contacts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 14px;
-        font-size: 9.5pt;
-        color: var(--muted);
-      }
-
-      .contacts a {
-        color: inherit;
-        text-decoration: none;
-      }
-
       h2 {
-        margin: 16px 0 8px;
-        font-size: 11.5pt;
-        color: var(--ink);
-        border-bottom: 1px solid var(--line);
+        margin: 0 0 8px;
+        font-size: 11pt;
+        font-weight: 800;
+        color: var(--accent-deep);
+        border-bottom: 1.5px solid var(--ink);
         padding-bottom: 4px;
       }
 
+      h3 {
+        margin: 0 0 4px;
+        font-size: 10.5pt;
+        font-weight: 700;
+      }
+
+      h4 {
+        margin: 0 0 4px;
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: var(--accent-deep);
+      }
+
       p {
-        margin: 0 0 8px;
+        margin: 0 0 7px;
         text-align: justify;
         text-align-last: right;
       }
 
       ul {
         margin: 0;
-        padding: 0 16px 0 0;
+        padding: 0 14px 0 0;
       }
 
       li + li {
-        margin-top: 3px;
+        margin-top: 2px;
       }
 
-      .meta {
-        color: var(--muted);
-        font-size: 9.5pt;
-        margin-bottom: 6px;
+      a {
+        color: var(--accent-deep);
+        text-decoration: none;
+        font-weight: 600;
       }
 
-      .job {
+      .header {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 14px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--ink);
         margin-bottom: 12px;
       }
 
-      .job h3 {
-        margin: 0;
+      .role {
+        margin: 4px 0 6px;
+        color: var(--accent);
+        font-weight: 800;
         font-size: 11pt;
+      }
+
+      .tagline {
+        margin: 0;
+        color: var(--muted);
+        font-size: 9.5pt;
+        font-weight: 600;
+      }
+
+      .side-card {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 11px;
+      }
+
+      .side-card .label {
+        font-size: 8.5pt;
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .side-card .value {
+        font-weight: 700;
+        font-size: 9.3pt;
+        margin-bottom: 6px;
+      }
+
+      .side-card .value:last-child {
+        margin-bottom: 0;
+      }
+
+      .links {
+        display: grid;
+        gap: 7px;
+        margin: 10px 0 12px;
+      }
+
+      .link-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 9px 11px;
+        border-radius: 8px;
+        border: 2px solid var(--accent);
+        background: var(--soft-2);
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .link-box.primary {
+        background: linear-gradient(120deg, #8f3f2c, #b4533a);
+        border-color: #8f3f2c;
+        color: #fff;
+      }
+
+      .link-box.primary a,
+      .link-box.primary .cta,
+      .link-box.primary strong,
+      .link-box.primary .kicker {
+        color: #fff;
+      }
+
+      .link-box .kicker {
+        display: block;
+        font-size: 8.2pt;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 1px;
+      }
+
+      .link-box strong {
+        display: block;
+        font-size: 10pt;
+        line-height: 1.35;
+      }
+
+      .link-box .url {
+        display: block;
+        font-size: 7.8pt;
+        font-weight: 500;
+        opacity: 0.9;
+        direction: ltr;
+        text-align: left;
+        margin-top: 2px;
+        word-break: break-all;
+      }
+
+      .link-box .cta {
+        flex-shrink: 0;
+        font-size: 9pt;
+        font-weight: 800;
+        color: var(--accent-deep);
+        white-space: nowrap;
+      }
+
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        font-size: 8.8pt;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+
+      .contacts a {
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .section {
+        margin-bottom: 11px;
       }
 
       .two {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8px 24px;
+        gap: 10px 16px;
+      }
+
+      .three {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+      }
+
+      .stat {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 8px 9px;
+        text-align: center;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 14pt;
+        color: var(--accent-deep);
+        line-height: 1.2;
+      }
+
+      .stat span {
+        font-size: 8pt;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .box {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 8px 9px;
+      }
+
+      .box p {
+        margin: 0;
+        font-size: 8.8pt;
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+        margin-top: 6px;
+      }
+
+      .step {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 7px 6px;
+        text-align: center;
+      }
+
+      .step b {
+        display: block;
+        color: var(--accent);
+        font-size: 8pt;
+        margin-bottom: 2px;
+      }
+
+      .step span {
+        font-size: 8.2pt;
+        font-weight: 700;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 8.6pt;
+        margin-bottom: 6px;
       }
 
       .chips {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px;
+        gap: 5px;
       }
 
       .chip {
         border: 1px solid var(--line);
         background: var(--soft);
         border-radius: 999px;
-        padding: 2px 10px;
-        font-size: 9pt;
+        padding: 2px 8px;
+        font-size: 8pt;
+        font-weight: 600;
       }
 
-      .figma-box {
+      .insight {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: 6px;
+        margin-bottom: 5px;
+      }
+
+      .insight .n {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-size: 8pt;
+        font-weight: 800;
         display: flex;
-        flex-direction: column;
-        gap: 2px;
-        margin-top: 12px;
-        padding: 10px 12px;
-        border: 2px solid var(--accent);
-        border-radius: 8px;
-        background: #fdf3ef;
-        color: var(--ink);
-        text-decoration: none;
-      }
-
-      .figma-box-label {
-        font-size: 9pt;
-        color: var(--accent);
-        font-weight: 700;
-      }
-
-      .figma-box strong {
-        font-size: 11pt;
-        color: var(--ink);
-      }
-
-      .figma-box-cta {
-        margin-top: 2px;
-        font-size: 9.5pt;
-        font-weight: 700;
-        color: var(--accent);
-      }
-
-      .figma-box-sm {
-        margin-top: 8px;
-        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        gap: 8px;
+        justify-content: center;
+        margin-top: 2px;
+      }
+
+      .thumb {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+
+      .thumb img {
+        width: 100%;
+        display: block;
+        max-height: 210px;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      .caption {
+        padding: 6px 8px;
+        font-size: 8pt;
+        color: var(--muted);
+        background: var(--soft);
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-note {
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        font-size: 8.2pt;
+        color: var(--muted);
+        text-align: center;
       }
 
       @media print {
@@ -195,116 +393,120 @@
     </style>
   </head>
   <body>
+    <!-- ===================== PAGE 1 ===================== -->
     <div class="page">
-      <header>
-        <h1>مریم رافتی حمایتی</h1>
-        <p class="title">طراح Junior UX/UI — تمرکز اولیه روی تجربه کاربری</p>
-        <p class="tagline">طراحی برای تجربه‌های انسانی</p>
-        <div class="contacts">
-          <a href="mailto:maryamrafatih@gmail.com">maryamrafatih@gmail.com</a>
-          <span>|</span>
-          <a href="tel:+989359390323" dir="ltr">0935 939 0323</a>
-          <span>|</span>
-          <span>تهران · حضوری / هیبرید / دورکار</span>
-          <span>|</span>
-          <a href="https://www.linkedin.com/in/maryamrafati/">linkedin.com/in/maryamrafati</a>
+      <header class="header">
+        <div>
+          <h1>مریم رافتی حمایتی</h1>
+          <p class="role">طراح Junior UX/UI Designer</p>
+          <p class="tagline">طراحی برای تجربه‌های انسانی · تمرکز اولیه روی UX و رشد به‌سمت UI</p>
+          <div class="contacts">
+            <a href="mailto:maryamrafatih@gmail.com">maryamrafatih@gmail.com</a>
+            <span>|</span>
+            <a href="tel:+989359390323" dir="ltr">0935 939 0323</a>
+            <span>|</span>
+            <span>تهران · حضوری / هیبرید / دورکار</span>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/maryamrafati/">linkedin.com/in/maryamrafati</a>
+          </div>
         </div>
-        <a
-          class="figma-box"
-          href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l/Untitled?node-id=0-1&t=8T8dZRmEsKcyukHv-1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="figma-box-label">طراحی UI نهایی پروژه</span>
-          <strong>مشاهده فایل Figma — نیل پستری</strong>
-          <span class="figma-box-cta">باز کردن لینک Figma ←</span>
-        </a>
+        <aside class="side-card">
+          <div class="label">نقش هدف</div>
+          <div class="value">Junior UX/UI</div>
+          <div class="label">رویکرد</div>
+          <div class="value">Design Thinking (IDEO)</div>
+          <div class="label">پیشینه</div>
+          <div class="value">کارشناسی مهندسی رباتیک</div>
+          <div class="label">تمرکز تخصصی</div>
+          <div class="value">اعتماد · شفافیت · مسیر خرید</div>
+        </aside>
       </header>
 
-      <section>
+      <div class="links">
+        <a
+          class="link-box primary"
+          href="https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/"
+        >
+          <span>
+            <span class="kicker">پورتفولیو آنلاین</span>
+            <strong>مشاهده سایت پورتفولیو UX/UI</strong>
+            <span class="url">maryamrafatihemayati.github.io/maryam-rafati-portfolio</span>
+          </span>
+          <span class="cta">باز کردن ←</span>
+        </a>
+        <a
+          class="link-box"
+          href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l/Untitled?node-id=0-1&t=8T8dZRmEsKcyukHv-1"
+        >
+          <span>
+            <span class="kicker">طراحی UI نهایی</span>
+            <strong>مشاهده فایل Figma پروژه نیل پستری</strong>
+            <span class="url">figma.com/design/LCT64nO02nd3zQWZebhM3l</span>
+          </span>
+          <span class="cta">باز کردن Figma ←</span>
+        </a>
+      </div>
+
+      <section class="section">
         <h2>خلاصه حرفه‌ای</h2>
         <p>
-          طراح Junior UX/UI با پیشینه مهندسی رباتیک. با روش Design Thinking
-          (IDEO) از تحقیق کاربر به تعریف مسئله، Insight، پرسونا، نقشه سفر و
-          وایرفریم می‌رسم. به‌دنبال نقش Junior UX/UI هستم — با شروع از UX و رشد
-          به‌سمت UI.
+          طراح Junior UX/UI با پیشینه مهندسی رباتیک. با روش Design Thinking از
+          تحقیق کاربر به تعریف مسئله، Insight، پرسونا، نقشه سفر، وایرفریم و UI
+          می‌رسم. به‌دنبال همکاری در تیم‌های محصول هستم؛ مسیرم از UX شروع می‌شود
+          و به‌سمت UI رشد می‌کند.
         </p>
       </section>
 
-      <section>
-        <h2>پروژه شاخص</h2>
-        <div class="job">
-          <h3>نیل پستری (Nill Pastry) — طراحی تجربه خرید آنلاین</h3>
-          <p class="meta">
-            طراح UX/UI و هم‌بنیان‌گذار · حدود ۶ تا ۸ هفته · کرج / تهران · ۱۴۰۴–۱۴۰۵
-          </p>
-          <ul>
-            <li>
-              بازطراحی مسیر سفارش از اینستاگرام/تلگرام به‌سمت تجربه شفاف‌تر و
-              قابل‌اعتمادتر برای فروشگاه آنلاین شیرینی خانگی
-            </li>
-            <li>
-              انجام ۵ مصاحبه رفتارمحور؛ استخراج ۱۰ Insight، ۲ پرسونا، Journey Map
-              و User Flow وضعیت فعلی
-            </li>
-            <li>
-              تعریف اهداف UX حول اعتماد، شفافیت ارسال بین‌شهری و ساده‌سازی مسیر
-              سفارش؛ اولویت‌بندی ایده‌های MVP و طراحی وایرفریم Homepage
-            </li>
-            <li>
-              طراحی UI نهایی در Figma با تصاویر واقعی محصول
-            </li>
-          </ul>
-          <a
-            class="figma-box figma-box-sm"
-            href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l/Untitled?node-id=0-1&t=8T8dZRmEsKcyukHv-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>لینک Figma پروژه نیل</strong>
-            <span class="figma-box-cta">باز کردن طراحی UI ←</span>
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <h2>مهارت‌ها</h2>
+      <section class="section">
+        <h2>مهارت‌ها و ابزارها</h2>
         <div class="two">
-          <div>
-            <strong>تحقیق و استراتژی</strong>
+          <div class="box">
+            <h4>تحقیق و استراتژی</h4>
             <ul>
-              <li>Design Thinking (IDEO)</li>
-              <li>UX Research و مصاحبه کاربر</li>
-              <li>تحلیل Insight و Usability Testing</li>
+              <li>Design Thinking (متدولوژی IDEO)</li>
+              <li>UX Research و مصاحبه رفتارمحور</li>
+              <li>تحلیل الگوها و Insight</li>
+              <li>Usability Testing</li>
             </ul>
           </div>
-          <div>
-            <strong>طراحی تجربه و رابط</strong>
+          <div class="box">
+            <h4>طراحی تجربه و رابط</h4>
             <ul>
               <li>Persona · Journey Map · User Flow</li>
               <li>Wireframing · Prototyping · UI Design</li>
-              <li>Figma · Excalidraw · Notion · HTML/CSS پایه</li>
+              <li>Figma · Excalidraw · Notion</li>
+              <li>HTML / CSS (پایه)</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2>تحصیلات و تجربه مکمل</h2>
-        <div class="job">
-          <h3>کارشناسی مهندسی رباتیک</h3>
-          <p class="meta">پیشینه تحلیلی و سیستماتیک برای تعریف دقیق مسئله</p>
-        </div>
-        <div class="job">
-          <h3>تدریس رباتیک</h3>
-          <p class="meta">
-            مهارت انتقالی: توضیح شفاف، همدلی و ساده‌سازی مفاهیم پیچیده در تعامل
-            با مخاطب
-          </p>
+      <section class="section">
+        <h2>فرآیند طراحی من</h2>
+        <div class="process">
+          <div class="step"><b>۰۱</b><span>همدلی</span></div>
+          <div class="step"><b>۰۲</b><span>تعریف مسئله</span></div>
+          <div class="step"><b>۰۳</b><span>ایده‌پردازی</span></div>
+          <div class="step"><b>۰۴</b><span>نمونه‌سازی</span></div>
+          <div class="step"><b>۰۵</b><span>تست</span></div>
         </div>
       </section>
 
-      <section>
+      <section class="section">
+        <h2>تحصیلات و تجربه مکمل</h2>
+        <div class="two">
+          <div>
+            <h3>کارشناسی مهندسی رباتیک</h3>
+            <p class="meta">تفکر تحلیلی و سیستماتیک برای تعریف دقیق مسئله</p>
+          </div>
+          <div>
+            <h3>تدریس رباتیک</h3>
+            <p class="meta">مهارت انتقالی: توضیح شفاف، همدلی و ساده‌سازی مفاهیم</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
         <h2>کلمات کلیدی</h2>
         <div class="chips">
           <span class="chip">Junior UX/UI</span>
@@ -314,10 +516,123 @@
           <span class="chip">Persona</span>
           <span class="chip">Journey Map</span>
           <span class="chip">Wireframe</span>
+          <span class="chip">UI Design</span>
           <span class="chip">Figma</span>
           <span class="chip">E-commerce UX</span>
         </div>
       </section>
+
+      <p class="footer-note">
+        صفحه ۱ از ۲ · پورتفولیو / رزومه مریم رافتی حمایتی · برای مشاهده جزئیات کامل
+        به لینک‌های بالا مراجعه کنید
+      </p>
+    </div>
+
+    <!-- ===================== PAGE 2 ===================== -->
+    <div class="page">
+      <section class="section">
+        <h2>کیس‌استادی شاخص — نیل پستری (Nill Pastry)</h2>
+        <h3>بازطراحی تجربه خرید آنلاین شیرینی خانگی</h3>
+        <p class="meta">
+          نقش: طراح UX/UI و هم‌بنیان‌گذار · مدت: حدود ۶ تا ۸ هفته · حوزه: فروشگاه
+          آنلاین / کرج–تهران · وضعیت: تحقیق، وایرفریم و UI نهایی در Figma
+        </p>
+      </section>
+
+      <div class="three" style="margin-bottom: 10px">
+        <div class="stat"><strong>۵</strong><span>مصاحبه واقعی</span></div>
+        <div class="stat"><strong>۱۰</strong><span>Insight کلیدی</span></div>
+        <div class="stat"><strong>۲</strong><span>پرسونای نهایی</span></div>
+      </div>
+
+      <section class="section">
+        <h2>مسئله</h2>
+        <p>
+          سفارش‌ها فقط از اینستاگرام و تلگرام انجام می‌شد؛ وبسایت رسمی وجود نداشت.
+          اعتماد کاربر در خرید اینستاگرامی پایین بود و ارسال بین‌شهری (کرج به
+          تهران) ابهام و اضطراب ایجاد می‌کرد. نتیجه: بخشی از کاربران قبل از خرید
+          نهایی منصرف می‌شدند.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>اهداف UX</h2>
+        <div class="three">
+          <div class="box"><h4>اعتماد</h4><p>افزایش حس اعتماد با نشانه‌های واقعی و انسانی</p></div>
+          <div class="box"><h4>شفافیت ارسال</h4><p>کاهش ابهام زمان، هزینه و وضعیت سفارش</p></div>
+          <div class="box"><h4>مسیر سفارش</h4><p>ساده‌سازی و شفاف‌سازی گام‌های خرید</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>روش تحقیق</h2>
+        <p>
+          ۵ مصاحبه رفتارمحور حول اعتماد، تصمیم خرید، تجربه سفارش آنلاین، ارسال و
+          انگیزه‌های احساسی. تمرکز بر فهم رفتار بود، نه نظرخواهی سطحی.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>نمونه Insightهای کلیدی</h2>
+        <div class="insight"><span class="n">۱</span><p>کاربران قبل از خرید کیفیت را لمس نمی‌کنند؛ به نشانه‌های واقعی‌بودن، هویت انسانی و پشت‌صحنه تکیه می‌کنند.</p></div>
+        <div class="insight"><span class="n">۲</span><p>نبود قیمت فقط کمبود اطلاعات نیست؛ از نظر کاربر پنهان‌کاری و افزایش ریسک است.</p></div>
+        <div class="insight"><span class="n">۳</span><p>اضطراب زیاد از نداشتن دید روی وضعیت سفارش بعد از پرداخت می‌آید.</p></div>
+        <div class="insight"><span class="n">۴</span><p>پاسخ دیرهنگام در دایرکت (بیش از حدود ۶۰ دقیقه) حس پشتیبانی ضعیف ایجاد می‌کند.</p></div>
+      </section>
+
+      <section class="section">
+        <h2>پرسوناها و خروجی طراحی</h2>
+        <div class="two">
+          <div class="box">
+            <h4>پرسونا ۱ — خریدار اعتمادمحور</h4>
+            <p>نیاز به نشانه‌های واقعی‌بودن برند برای کاهش ریسک خرید.</p>
+          </div>
+          <div class="box">
+            <h4>پرسونا ۲ — خریدار محتاط</h4>
+            <p>نیاز به شفافیت قیمت، زمان تحویل و کنترل وضعیت سفارش.</p>
+          </div>
+        </div>
+        <ul style="margin-top: 7px">
+          <li>User Journey Map وضعیت فعلی + شناسایی نقاط درد و فرصت طراحی</li>
+          <li>User Flow مسیر خرید اینستاگرامی (As-Is)</li>
+          <li>HMW و ایده‌های MVP برای اعتماد، کاهش ریسک و تجربه احساسی</li>
+          <li>وایرفریم Homepage با annotation دلیل طراحی</li>
+          <li>UI نهایی در Figma با تصاویر واقعی محصول</li>
+        </ul>
+      </section>
+
+      <div class="thumb">
+        <img src="../assets/images/nill-wireframe.png" alt="وایرفریم صفحه اصلی نیل پستری" />
+        <div class="caption">وایرفریم Homepage — از تحقیق تا ساختار صفحه برای اعتماد و شفافیت</div>
+      </div>
+
+      <div class="links" style="margin-top: 10px">
+        <a
+          class="link-box primary"
+          href="https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/case-studies/nill-pastry.html"
+        >
+          <span>
+            <span class="kicker">کیس‌استادی کامل</span>
+            <strong>مطالعه جزئیات پروژه در پورتفولیو آنلاین</strong>
+          </span>
+          <span class="cta">باز کردن ←</span>
+        </a>
+        <a
+          class="link-box"
+          href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l/Untitled?node-id=0-1&t=8T8dZRmEsKcyukHv-1"
+        >
+          <span>
+            <span class="kicker">UI نهایی</span>
+            <strong>مشاهده طراحی کامل در Figma</strong>
+          </span>
+          <span class="cta">باز کردن Figma ←</span>
+        </a>
+      </div>
+
+      <p class="footer-note">
+        صفحه ۲ از ۲ · آماده گفت‌وگو برای نقش Junior UX/UI ·
+        maryamrafatih@gmail.com · ۰۹۳۵۹۳۹۰۳۲۳
+      </p>
     </div>
   </body>
 </html>
