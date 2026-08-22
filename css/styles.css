@@ -396,8 +396,18 @@ textarea {
   text-wrap: balance;
 }
 
+.hero-role {
+  margin: 0.85rem 0 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.02em;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .hero-tagline {
-  margin: 1.25rem auto 0;
+  margin: 1rem auto 0;
   font-size: clamp(1.35rem, 3vw, 1.85rem);
   font-weight: 600;
   line-height: 1.5;
