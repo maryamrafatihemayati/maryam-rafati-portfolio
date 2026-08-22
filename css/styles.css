@@ -184,8 +184,19 @@ textarea {
   min-height: var(--nav-h);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: inherit;
+  font-weight: inherit;
 }
 
 .nav-links {
@@ -244,7 +255,6 @@ textarea {
 
 .nav-toggle {
   display: none;
-  margin-inline-start: auto;
   width: 44px;
   height: 44px;
   border: 1px solid var(--line-strong);
