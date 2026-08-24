@@ -681,10 +681,12 @@ textarea {
   font-size: 1.05rem;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  direction: ltr;
-  text-align: left;
   justify-content: flex-start;
+  gap: 0.55rem;
+  width: 100%;
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate;
 }
 
 .skill-group h3::before {
