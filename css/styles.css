@@ -1053,6 +1053,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.1rem 1.15rem;
+  min-height: 5.5rem;
 }
 
 .overview-item strong {
@@ -1060,13 +1061,20 @@ textarea {
   font-size: 0.85rem;
   color: var(--muted);
   font-weight: 500;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
 }
 
 .overview-item span {
   display: block;
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+.overview-item .overview-en {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+  font-size: 0.98rem;
 }
 
 .cs-cover {
