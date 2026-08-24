@@ -748,7 +748,7 @@ textarea {
   min-height: 340px;
   background:
     linear-gradient(160deg, rgba(26, 23, 21, 0.15), rgba(180, 83, 58, 0.25)),
-    url("../assets/images/nill-wireframe.png") center/cover no-repeat;
+    url("../assets/images/nill-wireframe.png") top center / cover no-repeat;
 }
 
 .project-body {
