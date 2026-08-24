@@ -703,7 +703,7 @@ textarea {
 
 .skill-group li {
   color: var(--ink-soft);
-  padding-right: 0.9rem;
+  padding-inline-start: 0.9rem;
   position: relative;
   font-size: 0.98rem;
 }
@@ -711,12 +711,16 @@ textarea {
 .skill-group li::before {
   content: "";
   position: absolute;
-  right: 0;
+  inset-inline-start: 0;
   top: 0.72em;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: var(--line-strong);
+}
+
+.skill-group ul[dir="ltr"] {
+  text-align: left;
 }
 
 /* ---------- Work / Project teaser ---------- */
