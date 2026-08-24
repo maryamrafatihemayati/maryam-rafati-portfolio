@@ -731,6 +731,8 @@ textarea {
 .project-feature {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 1fr;
+  align-items: stretch;
   gap: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -746,10 +748,10 @@ textarea {
 
 .project-media {
   position: relative;
-  min-height: 420px;
-  align-self: stretch;
+  min-height: 100%;
+  height: 100%;
   overflow: hidden;
-  background: #f4ebe4;
+  background: #f7f1ec;
 }
 
 .project-media img {
@@ -767,6 +769,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 420px;
 }
 
 .project-meta {
@@ -1625,7 +1628,12 @@ textarea {
   }
 
   .project-media {
-    min-height: 220px;
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .project-body {
+    min-height: 0;
   }
 
   .journey-meta {
