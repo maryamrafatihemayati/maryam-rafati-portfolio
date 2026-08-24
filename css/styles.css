@@ -591,7 +591,25 @@ textarea {
 .process-intro {
   max-width: 720px;
   color: var(--ink-soft);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.process-flow {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+  max-width: 920px;
+  margin: 0 0 2.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  line-height: 1.8;
+  word-spacing: 0.15em;
 }
 
 .process-steps {
