@@ -1093,6 +1093,13 @@ textarea {
   border-top: 1px solid var(--line);
 }
 
+.en-flow {
+  display: inline;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
 .cs-layout {
   display: grid;
   grid-template-columns: 220px 1fr;
