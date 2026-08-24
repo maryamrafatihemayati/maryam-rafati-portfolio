@@ -731,6 +731,7 @@ textarea {
 .project-feature {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
   gap: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -746,9 +747,10 @@ textarea {
 
 .project-media {
   min-height: 340px;
+  height: 100%;
   background:
     linear-gradient(160deg, rgba(26, 23, 21, 0.15), rgba(180, 83, 58, 0.25)),
-    url("../assets/images/nill-wireframe.png") center / cover no-repeat;
+    url("../assets/images/nill-wireframe.png") center/cover no-repeat;
 }
 
 .project-body {
@@ -756,6 +758,12 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 981px) {
+  .project-feature {
+    grid-template-columns: 1.05fr 0.95fr !important;
+  }
 }
 
 .project-meta {
