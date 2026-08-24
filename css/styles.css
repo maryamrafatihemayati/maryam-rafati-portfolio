@@ -111,7 +111,6 @@ body {
 .cs-content h2,
 .cs-content h3,
 .about-aside h3,
-.skill-group h3,
 .process-step h3,
 .contact-aside h3,
 .cs-cta h3 {
@@ -683,6 +682,9 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.55rem;
+  direction: ltr;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .skill-group h3::before {
