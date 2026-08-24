@@ -745,10 +745,21 @@ textarea {
 }
 
 .project-media {
-  min-height: 340px;
-  background:
-    linear-gradient(160deg, rgba(26, 23, 21, 0.15), rgba(180, 83, 58, 0.25)),
-    url("../assets/images/nill-wireframe.png") top center / cover no-repeat;
+  position: relative;
+  min-height: 420px;
+  align-self: stretch;
+  overflow: hidden;
+  background: #f4ebe4;
+}
+
+.project-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .project-body {
