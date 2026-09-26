@@ -4,25 +4,25 @@
    ========================================================= */
 
 :root {
-  /* Warm modern palette — not cream/terracotta cliché */
-  --ink: #1a1715;
-  --ink-soft: #3a342f;
-  --muted: #6b635c;
-  --line: rgba(26, 23, 21, 0.1);
-  --line-strong: rgba(26, 23, 21, 0.18);
+  /* Resume-aligned professional system — cool ink + blue accent */
+  --ink: #12161c;
+  --ink-soft: #252b33;
+  --muted: #5c6770;
+  --line: rgba(18, 22, 28, 0.1);
+  --line-strong: rgba(18, 22, 28, 0.16);
 
-  --bg: #f7f2ee;
-  --bg-elevated: #fffdfb;
-  --bg-soft: #efe7e0;
-  --bg-deep: #2a2320;
+  --bg: #f4f6f8;
+  --bg-elevated: #ffffff;
+  --bg-soft: #e8eef4;
+  --bg-deep: #12161c;
 
-  --accent: #b4533a;
-  --accent-deep: #8f3f2c;
-  --accent-soft: rgba(180, 83, 58, 0.12);
-  --accent-glow: rgba(180, 83, 58, 0.22);
+  --accent: #0f4c81;
+  --accent-deep: #0a3a63;
+  --accent-soft: rgba(15, 76, 129, 0.1);
+  --accent-glow: rgba(15, 76, 129, 0.22);
 
-  --sage: #5f7468;
-  --sage-soft: rgba(95, 116, 104, 0.12);
+  --sage: #3d5a5b;
+  --sage-soft: rgba(61, 90, 91, 0.1);
 
   --radius-sm: 8px;
   --radius: 14px;
@@ -57,9 +57,9 @@ body {
   font-feature-settings: "ss01" on, "kern" on;
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 100% -10%, rgba(180, 83, 58, 0.08), transparent 55%),
-    radial-gradient(900px 500px at 0% 20%, rgba(95, 116, 104, 0.07), transparent 50%),
-    linear-gradient(180deg, #faf6f3 0%, var(--bg) 40%, #f3ebe4 100%);
+    radial-gradient(1200px 600px at 100% -10%, rgba(15, 76, 129, 0.07), transparent 55%),
+    radial-gradient(900px 500px at 0% 25%, rgba(61, 90, 91, 0.06), transparent 50%),
+    linear-gradient(180deg, #f8fafb 0%, var(--bg) 42%, #eef2f6 100%);
   line-height: 1.85;
   font-size: 1.05rem;
   text-align: right;
@@ -349,7 +349,7 @@ textarea {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(115deg, rgba(26, 23, 21, 0.78) 0%, rgba(42, 35, 32, 0.55) 42%, rgba(180, 83, 58, 0.35) 100%),
+    linear-gradient(115deg, rgba(18, 22, 28, 0.88) 0%, rgba(15, 76, 129, 0.62) 48%, rgba(18, 22, 28, 0.78) 100%),
     url("../assets/images/nill-wireframe.png") center/cover no-repeat;
   transform: scale(1.04);
   animation: hero-zoom 18s var(--ease) infinite alternate;
@@ -361,8 +361,8 @@ textarea {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08), transparent 40%),
-    linear-gradient(to top, rgba(26, 23, 21, 0.35), transparent 45%);
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.1), transparent 42%),
+    linear-gradient(to top, rgba(18, 22, 28, 0.4), transparent 48%);
 }
 
 @keyframes hero-zoom {
@@ -399,7 +399,7 @@ textarea {
   margin: 0.85rem 0 0;
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(186, 214, 240, 0.95);
   letter-spacing: 0.02em;
   direction: ltr;
   unicode-bidi: isolate;
@@ -407,11 +407,12 @@ textarea {
 
 .hero-tagline {
   margin: 1rem auto 0;
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
-  font-weight: 600;
-  line-height: 1.5;
-  max-width: 18ch;
+  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.55;
+  max-width: 28ch;
   text-align: center;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-actions {
@@ -429,7 +430,7 @@ textarea {
 }
 
 .hero .btn-primary:hover {
-  background: #f3ebe4;
+  background: #e8eef4;
 }
 
 .hero .btn-secondary {
@@ -630,7 +631,7 @@ textarea {
 .process-step:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
-  border-color: rgba(180, 83, 58, 0.28);
+  border-color: rgba(15, 76, 129, 0.28);
 }
 
 .process-step .step-num {
@@ -665,7 +666,7 @@ textarea {
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
@@ -749,7 +750,7 @@ textarea {
   min-height: 340px;
   height: 100%;
   background:
-    linear-gradient(160deg, rgba(26, 23, 21, 0.15), rgba(180, 83, 58, 0.25)),
+    linear-gradient(160deg, rgba(18, 22, 28, 0.2), rgba(15, 76, 129, 0.35)),
     url("../assets/images/nill-wireframe.png") top center / cover no-repeat;
 }
 
@@ -837,9 +838,9 @@ textarea {
   padding: 1.35rem 1.5rem;
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(120deg, #8f3f2c 0%, #b4533a 55%, #c56a4f 100%);
+    linear-gradient(120deg, #0a3a63 0%, #0f4c81 55%, #1a6aad 100%);
   color: #fff;
-  box-shadow: 0 12px 36px rgba(180, 83, 58, 0.35);
+  box-shadow: 0 12px 36px rgba(15, 76, 129, 0.32);
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   text-align: right;
@@ -847,7 +848,7 @@ textarea {
 
 .figma-banner:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 44px rgba(180, 83, 58, 0.42);
+  box-shadow: 0 18px 44px rgba(15, 76, 129, 0.4);
 }
 
 .figma-banner-text {
@@ -1228,7 +1229,7 @@ textarea {
   padding: 1.15rem 1.25rem;
   border-radius: var(--radius);
   background: var(--accent-soft);
-  border: 1px solid rgba(180, 83, 58, 0.18);
+  border: 1px solid rgba(15, 76, 129, 0.18);
   color: var(--ink);
 }
 
@@ -1445,7 +1446,7 @@ textarea {
   margin: 0.75rem 0 0;
   padding: 0.75rem 0.85rem;
   border-radius: var(--radius-sm);
-  background: rgba(180, 83, 58, 0.08);
+  background: rgba(15, 76, 129, 0.08);
   border-right: 3px solid var(--accent);
   font-size: 0.93rem;
 }
@@ -1541,8 +1542,8 @@ textarea {
 }
 
 .status-pill.todo {
-  background: rgba(180, 83, 58, 0.08);
-  border-color: rgba(180, 83, 58, 0.18);
+  background: rgba(15, 76, 129, 0.08);
+  border-color: rgba(15, 76, 129, 0.18);
   color: var(--accent-deep);
 }
 
