@@ -385,7 +385,7 @@ textarea {
   padding: clamp(4rem, 10vw, 7rem) 0 clamp(5rem, 12vw, 7.5rem);
   color: #fff;
   max-width: 34rem;
-  margin-inline: 0 auto 0 0; /* sit on the readable (right) side in RTL */
+  margin-inline: 0 auto; /* RTL: stick to inline-start (right) */
   text-align: right;
 }
 
