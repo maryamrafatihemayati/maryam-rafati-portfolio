@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="کیس‌استادی UX/UI شیرینی‌پزی نیل — از تحقیق کاربر تا وایرفریم و UI فروشگاه آنلاین شیرینی خانگی."
+      content="کیس‌استادی UX/UI شیرینی‌پزی نیل — از تحقیق کاربر تا وایرفریم و UI. پروژه شخصی مریم رافتی حمایتی."
     />
     <meta name="author" content="مریم رافتی حمایتی" />
     <meta name="theme-color" content="#0f4c81" />
@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/styles.css?v=resume-align-v1" />
+    <link rel="stylesheet" href="../css/styles.css?v=notion-cs-v1" />
   </head>
   <body>
     <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
@@ -56,20 +56,23 @@
     </header>
 
     <main id="main">
+      <!-- ========== 1. HERO + META ========== -->
       <header class="cs-hero container">
         <nav class="cs-breadcrumb" aria-label="مسیر صفحه">
           <a href="../index.html">خانه</a>
           <span aria-hidden="true">/</span>
           <a href="../index.html#work">پروژه‌ها</a>
           <span aria-hidden="true">/</span>
-          <span>نیل پستری</span>
+          <span>شیرینی‌پزی نیل</span>
         </nav>
 
         <p class="section-label reveal">کیس‌استادی UX/UI · پروژه شخصی</p>
-        <h1 class="reveal reveal-delay-1">شیرینی‌پزی نیل — تجربه خرید آنلاین شفاف‌تر</h1>
+        <h1 class="reveal reveal-delay-1">
+          شیرینی‌پزی نیل — از سفارش پراکنده به مسیر شفاف خرید
+        </h1>
         <p class="lede reveal reveal-delay-2">
-          چگونه با ۵ مصاحبه واقعی، مسیر سفارش پراکنده در اینستاگرام و تلگرام را
-          به تجربه‌ای شفاف‌تر، قابل‌اعتمادتر و قابل‌پیگیری تبدیل کردم.
+          چگونه با ۵ مصاحبه رفتارمحور، اعتماد، شفافیت قیمت/ارسال و کنترل بعد از
+          پرداخت را به ساختار یک فروشگاه آنلاین شیرینی خانگی ترجمه کردم.
         </p>
 
         <div class="cs-overview reveal reveal-delay-3" aria-label="خلاصه پروژه">
@@ -79,7 +82,7 @@
           </div>
           <div class="overview-item">
             <strong>نوع</strong>
-            <span>پروژه شخصی · فروشگاه آنلاین</span>
+            <span>پروژه شخصی · برند خانوادگی</span>
           </div>
           <div class="overview-item">
             <strong>بازه</strong>
@@ -87,14 +90,14 @@
           </div>
           <div class="overview-item">
             <strong>خروجی</strong>
-            <span class="overview-en" dir="ltr" lang="en">Research · Wireframe · UI</span>
+            <span class="overview-en" dir="ltr" lang="en">Research → Wireframe → UI</span>
           </div>
         </div>
 
         <figure class="cs-cover reveal">
           <img
             src="../assets/images/nill-wireframe.png"
-            alt="وایرفریم صفحه اصلی وبسایت نیل پستری با بخش‌های هیرو، دسته‌بندی، پرفروش‌ها و نظرات"
+            alt="وایرفریم صفحه اصلی نیل با annotationهای دلیل طراحی"
             width="4425"
             height="5767"
             loading="eager"
@@ -104,8 +107,7 @@
           <figcaption>
             Wireframe Homepage —
             <span class="en-flow" dir="ltr" lang="en"
-              >Header → Hero → Product Categories → Best Sellers → Special
-              Collection → Reviews → About Us → Why Us → Footer</span
+              >Hero → Categories → Best Sellers → Seasonal → Reviews → About → Footer</span
             >
           </figcaption>
         </figure>
@@ -119,7 +121,7 @@
           <div class="figma-banner-text">
             <span class="figma-banner-label">طراحی UI نهایی</span>
             <strong>مشاهده فایل Figma پروژه نیل</strong>
-            <span class="figma-banner-hint">کلیک کنید تا طراحی کامل با تصاویر واقعی باز شود</span>
+            <span class="figma-banner-hint">طراحی کامل با تصاویر واقعی محصول</span>
           </div>
           <span class="figma-banner-cta">باز کردن Figma ↗</span>
         </a>
@@ -129,270 +131,303 @@
         <aside class="cs-toc" aria-label="فهرست بخش‌ها">
           <p>در این صفحه</p>
           <ul>
-            <li><a href="#overview">خلاصه و مسئله</a></li>
-            <li><a href="#context">زمینه برند</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#problem">مسئله</a></li>
+            <li><a href="#assumptions">فرضیات</a></li>
             <li><a href="#goals">اهداف UX</a></li>
             <li><a href="#research">تحقیق</a></li>
-            <li><a href="#insights">یافته‌ها</a></li>
+            <li><a href="#findings">یافته‌ها</a></li>
+            <li><a href="#insights">Insight</a></li>
             <li><a href="#personas">پرسونا</a></li>
             <li><a href="#journey">نقشه سفر</a></li>
-            <li><a href="#flow">جریان فعلی</a></li>
-            <li><a href="#hmw">HMW و ایده‌ها</a></li>
+            <li><a href="#flow">User Flow</a></li>
+            <li><a href="#hmw">HMW و Ideation</a></li>
             <li><a href="#design">طراحی</a></li>
-            <li><a href="#next">گام‌های بعدی</a></li>
+            <li><a href="#outcome">نتیجه و Reflection</a></li>
           </ul>
         </aside>
 
         <div class="cs-content">
+          <!-- ========== 2. OVERVIEW ========== -->
           <section id="overview">
-            <h2>خلاصه اجرایی</h2>
+            <h2>۱. Overview</h2>
             <p>
-              نیل یک برند شیرینی‌پزی خانگی است که فعلاً از طریق اینستاگرام و
-              تلگرام سفارش می‌گیرد. نبود وبسایت رسمی، ابهام در قیمت و ارسال، و
-              ضعف نشانه‌های اعتماد باعث می‌شود بخشی از کاربران قبل از خرید
-              منصرف شوند.
+              <strong>نیل (Nill Pastry)</strong> یک شیرینی‌پزی خانگی در کرج است که
+              حدود سه ماه پیش توسط دو خواهر راه‌اندازی شده؛ محصولات، شیرینی‌های
+              خاطره‌انگیز و بااصالت ایرانی‌اند. ارزش‌های برند حول کیفیت، دقت،
+              اعتماد، زیبایی، خلاقیت و هویت ایرانی شکل گرفته است.
+            </p>
+            <p>
+              فروش فعلاً فقط از اینستاگرام و تلگرام انجام می‌شود. صاحبان کسب‌وکار
+              با سه چالش واقعی روبه‌رو بودند: اعتماد پایین به پیج، ابهام قیمت و
+              زمان ارسال، و دغدغهٔ ارسال بین‌شهری کرج به تهران. من این پروژه را
+              به‌عنوان <strong>پروژه شخصی</strong> و مسیر کامل UX تا UI پیش بردم —
+              با همکاری خواهرم در سمت کسب‌وکار — تا آموخته‌هایم را روی یک مسئلهٔ
+              واقعی بیازمایم و تجربهٔ خرید را شفاف‌تر و قابل‌اعتمادتر کنم.
             </p>
             <div class="callout">
-              <strong>مسئله اصلی</strong>
-              کاربران در طول خرید آنلاین با پیچیدگی و عدم شفافیت مواجه‌اند و به
-              یک مسیر خرید ساده‌تر، قابل‌پیش‌بینی‌تر و قابل‌اعتمادتر نیاز دارند.
-            </div>
-            <p>
-              نقش من طراحی تجربه و رابط کاربری این مسیر بود: از مصاحبه و استخراج
-              Insight تا پرسونا، Journey Map، ایده‌های MVP، وایرفریم و UI نهایی
-              در Figma. این پروژه را به‌عنوان <strong>پروژه شخصی</strong> انجام
-              دادم تا آموخته‌هایم را در یک مسیر کامل UX تا UI بیازمایم — روی
-              برند خانوادگی نیل، با همکاری خواهرم در سمت کسب‌وکار.
-            </p>
-            <div class="two-col" style="margin-top: 1.5rem">
-              <div class="panel know">
-                <h3>سه مانع اصلی کاربر</h3>
-                <ul>
-                  <li>ندیدن کیفیت قبل از خرید</li>
-                  <li>قیمت نامشخص به‌عنوان ریسک</li>
-                  <li>قطع اعتماد وقتی بعد از پرداخت پاسخی نمی‌آمد</li>
-                </ul>
-              </div>
-              <div class="panel know">
-                <h3>پاسخ طراحی</h3>
-                <ul>
-                  <li>قیمت و گام‌های سفارش خارج از دایرکت</li>
-                  <li>نشانه‌های واقعی بودن برند (داستان، پشت‌صحنه، نظر مشتری)</li>
-                  <li>شفافیت هزینه، زمان و وضعیت ارسال</li>
-                </ul>
-              </div>
+              <strong>یک‌خطی مسئله</strong>
+              کاربر نمی‌تواند کیفیت را لمس کند، قیمت و ارسال را شفاف نمی‌بیند، و
+              بعد از پرداخت کنترل روی سفارش ندارد — در نتیجه قبل از خرید یا بعد از
+              پرداخت، اعتماد می‌شکند.
             </div>
           </section>
 
-          <section id="context">
-            <h2>زمینه برند و مسئله کسب‌وکار</h2>
+          <!-- ========== 3. PROBLEM FRAMING ========== -->
+          <section id="problem">
+            <h2>۲. Problem Framing — آنچه می‌دانستیم</h2>
             <p>
-              نیل در کرج فعالیت می‌کند و به مشتریان کرج و تهران خدمات می‌دهد.
-              محصولات، شیرینی‌های خاطره‌انگیز و بااصالت ایرانی‌اند. ارزش‌های
-              برند بر کیفیت، نظم، اعتماد، اصالت ایرانی و طعم به‌یادماندنی بنا
-              شده‌اند.
+              قبل از تحقیق، واقعیت‌ها و مشاهدات صاحبان کسب‌وکار را جدا از فرضیات
+              ثبت کردم تا مسئله مبهم نماند.
             </p>
-
-            <div class="two-col">
-              <div class="panel know">
-                <h3>آنچه می‌دانستیم</h3>
-                <ul>
-                  <li>سفارش‌ها فقط از اینستاگرام و تلگرام انجام می‌شود</li>
-                  <li>وبسایت رسمی وجود ندارد</li>
-                  <li>ارسال بین‌شهری (کرج به تهران) دغدغه اصلی است</li>
-                  <li>اعتمادسازی در اینستاگرام دشوار است و خرید نهایی کاهش می‌یابد</li>
-                  <li>نبود سایت رسمی، سفارش‌گیری شفاف را سخت کرده است</li>
-                </ul>
-              </div>
-              <div class="panel assume">
-                <h3>فرضیات اولیه (نیازمند تحقیق)</h3>
-                <ul>
-                  <li>اینستاگرامی‌بودن برند اعتماد کافی ایجاد نمی‌کند</li>
-                  <li>نگرانی از ارسال روی تصمیم خرید اثر می‌گذارد</li>
-                  <li>نبود مسیر سفارش مشخص باعث سردرگمی می‌شود</li>
-                  <li>کاربران مسیر رسمی‌تر و ساختاریافته‌تر می‌خواهند</li>
-                </ul>
-              </div>
+            <div class="panel know">
+              <h3>What we know</h3>
+              <ul>
+                <li>کسب‌وکار در کرج است و به کرج و تهران خدمات می‌دهد؛ ارسال بین‌شهری دغدغه اصلی است.</li>
+                <li>سفارش‌ها فقط از اینستاگرام و تلگرام انجام می‌شود.</li>
+                <li>اعتماد به پیج پایین است و مشتری اغلب قبل از خرید منصرف می‌شود.</li>
+                <li>قیمت و زمان ارسال در یک مسیر مشخص دیده نمی‌شود.</li>
+                <li>سایت رسمی برای سفارش‌گیری سریع‌تر و تجربه شفاف وجود ندارد.</li>
+              </ul>
             </div>
           </section>
 
+          <!-- ========== 4. ASSUMPTIONS ========== -->
+          <section id="assumptions">
+            <h2>۳. Assumptions — فرضیات نیازمند تحقیق</h2>
+            <p>
+              این‌ها فرض‌های UX بودند؛ هدف تحقیق تأیید، رد یا عمیق‌تر کردنشان بود —
+              نه اثبات از پیش.
+            </p>
+            <div class="panel assume">
+              <h3>What we assume</h3>
+              <ul>
+                <li>اینستاگرامی‌بودن برند به‌تنهایی اعتماد کافی نمی‌سازد.</li>
+                <li>نگرانی از ارسال (تأخیر، کیفیت، سالم رسیدن) روی خرید اثر می‌گذارد.</li>
+                <li>نبود مسیر سفارش مشخص باعث سردرگمی می‌شود.</li>
+                <li>کاربران برای خرید قابل‌اعتمادتر، مسیر رسمی‌تر از دایرکت می‌خواهند.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ========== 5. UX GOALS ========== -->
           <section id="goals">
-            <h2>اهداف تجربه کاربری</h2>
+            <h2>۴. اهداف UX</h2>
             <div class="goals">
               <article class="goal">
                 <strong>اعتماد</strong>
                 <p>افزایش حس اعتماد در تجربه خرید آنلاین با نشانه‌های واقعی و انسانی.</p>
               </article>
               <article class="goal">
-                <strong>کاهش ابهام ارسال</strong>
-                <p>شفاف‌کردن زمان، هزینه و وضعیت ارسال برای کاهش اضطراب خرید.</p>
+                <strong>شفافیت ارسال</strong>
+                <p>کاهش نگرانی و ابهام در زمان، هزینه و وضعیت ارسال.</p>
               </article>
               <article class="goal">
-                <strong>مسیر سفارش ساده</strong>
+                <strong>مسیر سفارش</strong>
                 <p>ساده‌سازی و شفاف‌سازی گام‌های سفارش از کشف تا تحویل.</p>
               </article>
             </div>
-            <h3>متریک‌های هدف (پس از UI و لانچ)</h3>
+            <h3>شاخص‌های جهت‌دار (پس از لانچ)</h3>
             <ul>
               <li>کاهش انصراف در مرحلهٔ اعتماد / دایرکت قبل از ثبت سفارش</li>
               <li>افزایش وضوح قیمت و زمان تحویل پیش از خرید</li>
-              <li>کاهش اضطراب پس از پرداخت از طریق پیگیری وضعیت سفارش</li>
+              <li>کاهش اضطراب پس از پرداخت با پیگیری وضعیت سفارش</li>
             </ul>
           </section>
 
+          <!-- ========== 6. RESEARCH ========== -->
           <section id="research">
-            <h2>تحقیق کاربر</h2>
+            <h2>۵. Research Plan</h2>
             <p>
-              برای عبور از حدس به شواهد، ۵ مصاحبه واقعی انجام شد. تمرکز مصاحبه‌ها
-              بر فهم رفتار بود، نه نظرخواهی سطحی — با محورهای اعتماد، تصمیم خرید،
-              تجربه سفارش آنلاین، ارسال و انگیزه‌های احساسی.
+              برای عبور از حدس به شواهد، <strong>۵ مصاحبه رفتارمحور</strong> انجام
+              شد. سؤال‌ها برای فهم رفتار بودند، نه نظرخواهی سطحی؛ از دل مسئله،
+              فرضیات و گونه‌های کاربری استخراج شدند.
             </p>
 
-            <h3>انواع کاربر (پیش از تحلیل)</h3>
+            <h3>انواع کاربر (فرضی — پیش از تحلیل)</h3>
             <ul>
-              <li><strong>خریداران مناسبتی</strong> — تولد، مهمانی، نوروز؛ اهمیت ظاهر، کیفیت و رسیدن به‌موقع</li>
-              <li><strong>خریداران هدیه</strong> — حساس به بسته‌بندی شیک و خاص</li>
-              <li><strong>خریداران احساسی</strong> — به‌دنبال حس نوستالژیک و داستان برند</li>
-              <li><strong>خریداران اینستاگرامی</strong> — دغدغه اصلی‌شان اعتماد است</li>
+              <li><strong>مناسبتی</strong> — تولد، مهمانی، نوروز؛ ظاهر، کیفیت و رسیدن به‌موقع مهم است.</li>
+              <li><strong>هدیه</strong> — بسته‌بندی شیک و خاص اولویت دارد.</li>
+              <li><strong>احساسی</strong> — حس نوستالژیک و داستان برند ارزش دارد.</li>
+              <li><strong>اینستاگرامی</strong> — از کنجکاوی رسیده؛ دغدغه اصلی اعتماد است.</li>
             </ul>
 
-            <h3>نمونه سؤال‌های مصاحبه (رفتارمحور)</h3>
-            <p>
-              سؤال‌ها از دل مسئله، فرضیات و گونه‌های کاربری استخراج شدند تا رفتار
-              واقعی مشخص شود، نه ترجیح سطحی.
-            </p>
+            <h3>نمونه سؤال‌های کلیدی</h3>
             <div class="question-grid">
               <article class="question-card">
                 <h4>اعتماد</h4>
                 <ul>
-                  <li>وقتی وارد یک پیج می‌شوی معمولاً چه چیزهایی را بررسی می‌کنی؟</li>
-                  <li>چه چیزهایی باعث می‌شود احساس کنی این برند قابل‌اعتماد است؟</li>
+                  <li>وقتی وارد یک پیج می‌شوی چه چیزهایی را بررسی می‌کنی؟</li>
+                  <li>چه چیزی باعث می‌شود برند را قابل‌اعتماد بدانی؟</li>
                   <li>آخرین باری که از خرید آنلاین شیرینی منصرف شدی، دلیلش چه بود؟</li>
                 </ul>
               </article>
               <article class="question-card">
-                <h4>تصمیم خرید</h4>
+                <h4>تصمیم و تجربه</h4>
                 <ul>
-                  <li>معمولاً وقتی می‌خواهی شیرینی سفارش بدهی، اولین قدمت چیست؟</li>
-                  <li>چه لحظه‌ای در خرید باعث می‌شود تصمیم‌گیری برایت سخت شود؟</li>
-                  <li>چه عواملی برای انتخاب یک برند برایت مهم‌تر است؟</li>
+                  <li>اولین قدم وقتی می‌خواهی شیرینی سفارش بدهی چیست؟</li>
+                  <li>کدام مرحله سفارش‌گیری سخت یا گیج‌کننده است؟</li>
+                  <li>ترجیح می‌دهی سفارش از کدام پلتفرم باشد؟ چرا؟</li>
                 </ul>
               </article>
               <article class="question-card">
                 <h4>ارسال و ریسک</h4>
                 <ul>
                   <li>در ارسال شیرینی چه چیزی برایت مهم است؟</li>
-                  <li>اگر سفارش از شهر دیگری باشد، چه نگرانی‌هایی داری؟</li>
-                  <li>تا حالا به‌خاطر هزینه ارسال از خرید منصرف شده‌ای؟</li>
+                  <li>اگر سفارش از شهر دیگری باشد چه نگرانی‌هایی داری؟</li>
+                  <li>هزینه ارسال تا کجا روی تصمیم اثر می‌گذارد؟</li>
                 </ul>
               </article>
               <article class="question-card">
-                <h4>انگیزه و انتظار</h4>
+                <h4>انگیزه و پس از خرید</h4>
                 <ul>
                   <li>بیشتر برای چه موقعیت‌هایی شیرینی سفارش می‌دهی؟</li>
-                  <li>برایت مهم است شیرینی حس خانگی داشته باشد یا برند؟</li>
-                  <li>اگر بخواهی تجربه خرید آنلاین را بهتر کنی، چه چیزی کم است؟</li>
+                  <li>بعد از خرید چه چیزی برایت مهم است؟</li>
+                  <li>اگر محصول آسیب ببیند از برند چه انتظاری داری؟</li>
                 </ul>
               </article>
             </div>
 
             <div class="status-row" aria-label="وضعیت تحقیق">
               <span class="status-pill done">۵ مصاحبه واقعی</span>
-              <span class="status-pill done">دسته‌بندی مخاطب</span>
               <span class="status-pill done">تحلیل الگوها</span>
+              <span class="status-pill done">۲ پرسونای نهایی</span>
               <span class="status-pill todo">بررسی کامنت اینستاگرام (اختیاری)</span>
             </div>
           </section>
 
-          <section id="insights">
-            <h2>۱۰ Insight کلیدی</h2>
+          <!-- ========== 7. FINDINGS ========== -->
+          <section id="findings">
+            <h2>۶. Research Findings — الگوهای تکرارشونده</h2>
             <p>
-              الگوهای استخراج‌شده از مصاحبه‌ها، فرضیات اولیه را تأیید و عمیق‌تر
-              کردند. این Insightها پایهٔ تعریف مسئله، HMW و ایده‌های MVP شدند.
+              مصاحبه‌ها در چهار خوشه دسته‌بندی شدند. این الگوها فرضیات را تأیید و
+              با جزئیات قابل‌اقدام عمیق کردند.
             </p>
 
+            <div class="two-col">
+              <div class="panel know">
+                <h3>Trust Formation</h3>
+                <ul>
+                  <li><strong>بصری:</strong> عکس واقعی و باکیفیت معیار اعتماد است؛ عکس AI بی‌اعتمادی می‌آورد.</li>
+                  <li><strong>فرآیند:</strong> پشت‌صحنه و پست/استوری مداوم = حس زنده‌بودن کسب‌وکار.</li>
+                  <li><strong>انسانی:</strong> چهره صاحبان + داستان برند هویت می‌سازد.</li>
+                  <li><strong>اجتماعی:</strong> معرفی دوست و دنبال‌کننده مشترک قوی‌ترین سیگنال اولیه است.</li>
+                  <li><strong>ارتباطی:</strong> پاسخ کامل و محترمانه در دایرکت = حرفه‌ای‌بودن.</li>
+                </ul>
+              </div>
+              <div class="panel assume">
+                <h3>Risk &amp; Delivery</h3>
+                <ul>
+                  <li>حد تحمل پاسخ دایرکت حدود <strong>۴۰ دقیقه</strong>؛ تأخیر = حس پشتیبانی ضعیف.</li>
+                  <li>نبود قیمت و زمان تحویل = ریسک تصمیم و انصراف.</li>
+                  <li>نگرانی از سالم و بهداشتی رسیدن محصول بالاست.</li>
+                  <li>آستانه حساسیت هزینه ارسال حدود <strong>۲۰۰٬۰۰۰ تومان</strong> (در خرید شخصی پررنگ‌تر از هدیه).</li>
+                  <li>سکوت بعد از پرداخت اضطراب و حس از دست رفتن کنترل می‌سازد.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 1rem">
+              <div class="panel know">
+                <h3>Emotion</h3>
+                <ul>
+                  <li>شیرینی بخشی از مناسبت/هدیه است؛ نحوه ارائه به اندازه محصول مهم است.</li>
+                  <li>حس خانگی و کیفیت مواد اولیه ارزش احساسی خرید را بالا می‌برد.</li>
+                  <li>بسته‌بندی شیک بیشتر در موقعیت هدیه اهمیت دارد.</li>
+                </ul>
+              </div>
+              <div class="panel know">
+                <h3>Post-purchase</h3>
+                <ul>
+                  <li>تحویل مطابق انتظار (زمان + کیفیت) → خرید مجدد.</li>
+                  <li>اگر محصول آسیب ببیند، انتظار جبران از برند وجود دارد.</li>
+                  <li>اعتماد بعد از پرداخت تمام نمی‌شود؛ پیگیری و واکنش برند تعیین‌کننده است.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== 8. INSIGHTS ========== -->
+          <section id="insights">
+            <h2>۷. Insight — ۱۰ یافته تصمیم‌ساز</h2>
+            <p>
+              این Insightها پایه HMW، ایده‌های MVP و ساختار وایرفریم شدند.
+            </p>
             <div class="insight-grid">
               <article class="insight-item">
                 <span class="insight-num">۱</span>
                 <p>
-                  کاربران قبل از خرید نمی‌توانند کیفیت را لمس کنند؛ بنابراین به
-                  نشانه‌های واقعی‌بودن، هویت انسانی، پشت‌صحنه و داستان برند تکیه
-                  می‌کنند.
+                  چون کیفیت لمس‌شدنی نیست، کاربر به واقعی‌بودن، هویت انسانی،
+                  پشت‌صحنه و داستان برند تکیه می‌کند.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۲</span>
                 <p>
-                  پست و استوری مداوم، حس زنده‌بودن کسب‌وکار را منتقل می‌کند و
+                  پست و استوری مداوم، حس زنده‌بودن کسب‌وکار را می‌سازد و توجه و
                   اعتماد اولیه را بالا می‌برد.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۳</span>
                 <p>
-                  کیفیت پاسخ در دایرکت، اولین نقطه ارزیابی حرفه‌ای‌بودن برند در
-                  غیاب ارتباط حضوری است.
+                  کیفیت پاسخ دایرکت، اولین نقطه ارزیابی حرفه‌ای‌بودن برند در غیاب
+                  ارتباط حضوری است.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۴</span>
                 <p>
-                  بخش بزرگی از اضطراب، از نداشتن دید و کنترل روی فرآیند سفارش
-                  می‌آید.
+                  بخش بزرگی از اضطراب از نداشتن دید و کنترل روی فرآیند سفارش می‌آید.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۵</span>
                 <p>
-                  پاسخ دیرهنگام (بیش از حدود ۶۰ دقیقه) حس پشتیبانی ضعیف در آینده
-                  ایجاد می‌کند.
+                  پاسخ دیرتر از حدود ۴۰ دقیقه، حس پشتیبانی ضعیف در آینده می‌سازد.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۶</span>
                 <p>
-                  نبود قیمت فقط کمبود اطلاعات نیست؛ از نظر کاربر پنهان‌کاری و
-                  افزایش ریسک است.
+                  نبود قیمت فقط کمبود اطلاعات نیست؛ از دید کاربر پنهان‌کاری و افزایش ریسک است.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۷</span>
                 <p>
-                  شیرینی برای بسیاری، بخشی از مناسبت یا هدیه است؛ نحوه ارائه به
-                  اندازه خود محصول اهمیت دارد.
+                  شیرینی اغلب بخشی از مناسبت یا هدیه است؛ ارائه محصول به اندازه خود محصول اهمیت دارد.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۸</span>
                 <p>
-                  کاربران به‌دنبال حس خانگی و نوستالژی‌اند؛ برندهایی که این حس را
-                  منتقل کنند، ارتباط عمیق‌تری می‌سازند.
+                  کاربران به‌دنبال حس خانگی و نوستالژی‌اند؛ برندهایی که این حس را منتقل کنند ارتباط عمیق‌تری می‌سازند.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۹</span>
                 <p>
-                  کاربران هزینه را جداگانه نمی‌سنجند؛ ارزش کلی تجربه (کیفیت + ظاهر
-                  + هزینه) را ارزیابی می‌کنند.
+                  هزینه جداگانه سنجیده نمی‌شود؛ ارزش کلی تجربه (کیفیت + ظاهر + هزینه) معیار خرید است.
                 </p>
               </article>
               <article class="insight-item">
                 <span class="insight-num">۱۰</span>
                 <p>
-                  اعتماد بعد از پرداخت تمام نمی‌شود؛ پیگیری، تحویل و واکنش به
-                  مشکل تعیین می‌کند خرید مجدد رخ بدهد یا نه.
+                  اعتماد بعد از پرداخت ادامه دارد؛ پیگیری، تحویل و جبران مشکل تعیین می‌کند خرید مجدد رخ بدهد یا نه.
                 </p>
               </article>
             </div>
           </section>
 
+          <!-- ========== 9. PERSONAS ========== -->
           <section id="personas">
-            <h2>پرسوناهای نهایی</h2>
+            <h2>۸. Persona</h2>
             <p>
               از چهار نوع کاربر اولیه، دو پرسونای تصمیم‌ساز نهایی استخراج شد که
-              تنش اصلی تجربه را نمایندگی می‌کنند: اعتماد و کنترل.
+              تنش اصلی تجربه را نمایندگی می‌کنند: <strong>اعتماد</strong> و
+              <strong>کنترل</strong>.
             </p>
-
             <div class="persona-grid">
               <article class="persona-card">
                 <h3>پرسونا ۱ — خریدار اعتمادمحور</h3>
@@ -405,17 +440,16 @@
                 <p>خریدی مطمئن از جهت واقعی‌بودن و کیفیت بالا</p>
                 <span class="label">رفتار</span>
                 <ul>
-                  <li>بررسی واقعی‌بودن عکس‌ها</li>
+                  <li>بررسی واقعی‌بودن و کیفیت عکس‌ها</li>
                   <li>دیدن پشت‌صحنه و کارگاه</li>
                   <li>بررسی هویت انسانی برند</li>
-                  <li>توجه به Social Proof و پاسخ دایرکت</li>
+                  <li>توجه به Social Proof و پاسخ کامل دایرکت</li>
                 </ul>
                 <span class="label">نقطه درد</span>
                 <p>تصاویر غیرواقعی / AI و نبود چهره انسانی برند</p>
                 <span class="label">نقش در تصمیم</span>
                 <p>اگر اعتماد شکل نگیرد، خرید متوقف می‌شود.</p>
               </article>
-
               <article class="persona-card">
                 <h3>پرسونا ۲ — خریدار محتاط</h3>
                 <span class="label">انگیزه اصلی</span>
@@ -432,43 +466,42 @@
                   <li>حساسیت به سرعت پاسخ‌گویی</li>
                 </ul>
                 <span class="label">نقطه درد</span>
-                <p>سکوت بعد از پرداخت، ندانستن وضعیت سفارش، پاسخ دیرهنگام</p>
+                <p>سکوت بعد از پرداخت، ندانستن وضعیت سفارش، پاسخ دیرتر از حدود ۴۰ دقیقه</p>
                 <span class="label">نقش در تصمیم</span>
                 <p>اگر فرآیند قابل‌پیش‌بینی نباشد، منصرف می‌شود.</p>
               </article>
             </div>
           </section>
 
+          <!-- ========== 10. JOURNEY ========== -->
           <section id="journey">
-            <h2>نقشه سفر کاربر (وضعیت فعلی)</h2>
+            <h2>۹. User Journey Map (As-Is)</h2>
             <p>
-              Journey Map مسیر As-Is خرید از اینستاگرام را نشان می‌دهد: از کشف
-              تا تحویل — همراه با نقاط درد و فرصت‌های طراحی.
+              مسیر فعلی خرید از اینستاگرام — از کشف تا تحویل — با نقاط درد و فرصت
+              طراحی.
             </p>
-
             <div class="journey-grid">
               <article class="journey-card">
                 <header>
-                  <h3>۱. کشف (Discovery)</h3>
+                  <h3>۱. Discovery</h3>
                   <span class="badge">کنجکاوی · امید</span>
                 </header>
                 <div class="journey-meta">
                   <div>
                     <strong>اقدام</strong>
-                    <span>ورود به پیج و تخمین هویت برند</span>
+                    <span>ورود به پیج و کشف هویت برند</span>
                   </div>
                   <div>
                     <strong>سؤال ذهنی</strong>
                     <span>«این برند چیست و چه می‌کند؟»</span>
                   </div>
                 </div>
-                <p class="pain">⚠️ محتوای نامنظم باعث خروج سریع می‌شود — اولین تأثیر حیاتی است.</p>
+                <p class="pain">⚠️ محتوای نامنظم → خروج سریع؛ اولین تأثیر حیاتی است.</p>
                 <p class="opp">✦ فرصت: Behind the Scenes + چهره واقعی + Social Proof</p>
               </article>
-
               <article class="journey-card">
                 <header>
-                  <h3>۲. اعتماد (Trust)</h3>
+                  <h3>۲. Trust</h3>
                   <span class="badge">تردید</span>
                 </header>
                 <div class="journey-meta">
@@ -484,10 +517,9 @@
                 <p class="pain">⚠️ عکس غیرواقعی، نبود قیمت، نبود Social Proof و هویت انسانی سرد.</p>
                 <p class="opp">✦ فرصت: هایلایت مشتریان + قیمت شفاف + پشت‌صحنه واقعی</p>
               </article>
-
               <article class="journey-card">
                 <header>
-                  <h3>۳. تصمیم (Decision)</h3>
+                  <h3>۳. Decision</h3>
                   <span class="badge">گیجی احتمالی</span>
                 </header>
                 <div class="journey-meta">
@@ -500,19 +532,18 @@
                     <span>«قیمت؟ ارسال؟ کِی می‌رسه؟»</span>
                   </div>
                 </div>
-                <p class="pain">⚠️ دایرکت زمان‌بر؛ انتظار بیش از ۶۰ دقیقه منجر به انصراف می‌شود.</p>
-                <p class="opp">✦ فرصت: مراحل واضح سفارش + پنجره زمانی دقیق تحویل</p>
+                <p class="pain">⚠️ دایرکت زمان‌بر؛ تأخیر بیش از حدود ۴۰ دقیقه → انصراف.</p>
+                <p class="opp">✦ فرصت: مراحل واضح سفارش + تاریخ دقیق تحویل</p>
               </article>
-
               <article class="journey-card">
                 <header>
-                  <h3>۴. بعد از پرداخت</h3>
+                  <h3>۴. Post-purchase</h3>
                   <span class="badge">اضطراب</span>
                 </header>
                 <div class="journey-meta">
                   <div>
                     <strong>اقدام</strong>
-                    <span>انتظار برای تحویل و پیگیری وضعیت</span>
+                    <span>انتظار و پیگیری وضعیت سفارش</span>
                   </div>
                   <div>
                     <strong>سؤال ذهنی</strong>
@@ -522,10 +553,9 @@
                 <p class="pain">⚠️ سکوت بعد از پرداخت و از دست رفتن حس کنترل.</p>
                 <p class="opp">✦ فرصت: Order Tracking + پیش‌نمایش بسته‌بندی قبل از ارسال</p>
               </article>
-
               <article class="journey-card">
                 <header>
-                  <h3>۵. تحویل و احساس نهایی</h3>
+                  <h3>۵. Delivery &amp; Emotion</h3>
                   <span class="badge">رضایت یا ناامیدی</span>
                 </header>
                 <div class="journey-meta">
@@ -539,13 +569,14 @@
                   </div>
                 </div>
                 <p class="pain">⚠️ تأخیر یا آسیب محصول می‌تواند به خروج دائمی منجر شود.</p>
-                <p class="opp">✦ فرصت: ضمانت تحویل + ارتقای تجربه احساسی دریافت (آینده)</p>
+                <p class="opp">✦ فرصت: ضمانت تحویل + تجربه احساسی دریافت (آینده)</p>
               </article>
             </div>
           </section>
 
+          <!-- ========== 11. FLOW ========== -->
           <section id="flow">
-            <h2>جریان کاربری فعلی (User Flow)</h2>
+            <h2>۱۰. User Flow فعلی</h2>
             <p>مسیر خرید فعلی کاملاً متکی به دایرکت اینستاگرام است:</p>
             <ol class="flow-steps">
               <li><span class="flow-num">۱</span>ورود به پیج</li>
@@ -553,24 +584,26 @@
               <li><span class="flow-num">۳</span>بررسی اعتماد (عکس، پشت‌صحنه، نظرات)</li>
               <li><span class="flow-num">۴</span>تصمیم به خرید</li>
               <li><span class="flow-num">۵</span>پیام در دایرکت</li>
-              <li><span class="flow-num">۶</span>دریافت قیمت و زمان تحویل</li>
+              <li><span class="flow-num">۶</span>دریافت قیمت + زمان تحویل</li>
               <li><span class="flow-num">۷</span>ثبت سفارش</li>
               <li><span class="flow-num">۸</span>دریافت پیام تأیید</li>
-              <li><span class="flow-num">۹</span>انتظار و پیگیری وضعیت</li>
+              <li><span class="flow-num">۹</span>انتظار + پیگیری وضعیت</li>
               <li><span class="flow-num">۱۰</span>دریافت محصول و تجربه نهایی</li>
             </ol>
             <div class="callout">
               <strong>فرصت طراحی</strong>
-              وبسایت باید نقاط اصطکاک همین جریان را کم کند: قیمت از ابتدا پیدا
-              باشد، مراحل سفارش واضح باشد، و بعد از پرداخت کاربر در تاریکی نماند.
+              وبسایت باید همین نقاط اصطکاک را کم کند: قیمت از ابتدا پیدا باشد،
+              مراحل سفارش واضح باشد، و بعد از پرداخت کاربر در تاریکی نماند.
             </div>
           </section>
 
+          <!-- ========== 12. HMW + IDEATION ========== -->
           <section id="hmw">
-            <h2>How Might We و ایده‌پردازی</h2>
+            <h2>۱۱. HMW و Ideation</h2>
             <p>
-              سؤال‌های HMW پل بین Insight و راه‌حل بودند. ایده‌ها به دو دسته MVP
-              (قابل‌اجرا همین حالا) و Future تقسیم شدند.
+              سؤال‌های How Might We پل بین Insight و راه‌حل بودند. ایده‌ها به
+              <span class="mvp">MVP</span> (قابل‌اجرا همین حالا) و
+              <span class="future">آینده</span> تقسیم شدند.
             </p>
 
             <div class="hmw-grid">
@@ -584,11 +617,7 @@
               </article>
               <article class="hmw-card">
                 <span class="cat">Risk</span>
-                <p>چطور قیمت، زمان تحویل و فرآیند سفارش را پیش از خرید شفاف کنیم؟</p>
-              </article>
-              <article class="hmw-card">
-                <span class="cat">Risk</span>
-                <p>چطور اضطراب بعد از پرداخت را با پیگیری وضعیت سفارش کم کنیم؟</p>
+                <p>چطور عدم‌قطعیت خرید را در هر مرحله از مسیر کاربر کاهش دهیم؟</p>
               </article>
               <article class="hmw-card">
                 <span class="cat">Emotion</span>
@@ -598,51 +627,64 @@
 
             <div class="idea-grid" style="margin-top: 1.4rem">
               <article class="idea-card">
-                <h3>اعتماد</h3>
+                <h3>Trust</h3>
                 <ul>
-                  <li>عکس و استوری رضایت مشتری <span class="mvp">MVP</span></li>
-                  <li>ویدیو پشت‌صحنه پخت و بسته‌بندی <span class="mvp">MVP</span></li>
-                  <li>نمایش چهره واقعی بنیان‌گذاران <span class="mvp">MVP</span></li>
-                  <li>نمایش مراحل سفارش تا تحویل <span class="mvp">MVP</span></li>
+                  <li>عکس / استوری رضایت مشتری + هایلایت نظرات <span class="mvp">MVP</span></li>
+                  <li>ویدیو پشت‌صحنه پخت و بسته‌بندی ایمن <span class="mvp">MVP</span></li>
+                  <li>نمایش چهره واقعی صاحبان کسب‌وکار <span class="mvp">MVP</span></li>
+                  <li>نمایش مراحل: سفارش → آماده‌سازی → ارسال → تحویل <span class="mvp">MVP</span></li>
                   <li>نشان ارسال موفق کرج به تهران <span class="future">آینده</span></li>
                 </ul>
               </article>
               <article class="idea-card">
-                <h3>کاهش ریسک</h3>
+                <h3>Risk</h3>
                 <ul>
-                  <li>پیگیری ساده سفارش (دایرکت / تلگرام) <span class="mvp">MVP</span></li>
-                  <li>اعلام تاریخ دقیق به‌جای بازه مبهم <span class="mvp">MVP</span></li>
+                  <li>پیگیری ساده سفارش (دایرکت / بات تلگرام) <span class="mvp">MVP</span></li>
+                  <li>تاریخ دقیق تحویل به‌جای بازه مبهم <span class="mvp">MVP</span></li>
                   <li>عکس بسته‌بندی نهایی قبل از ارسال <span class="mvp">MVP</span></li>
-                  <li>ضمانت تأخیر / آسیب محصول <span class="mvp">MVP</span></li>
+                  <li>ضمانت تأخیر / آسیب (تخفیف یا ارسال مجدد) <span class="mvp">MVP</span></li>
                 </ul>
               </article>
               <article class="idea-card">
-                <h3>احساس و مناسبت</h3>
+                <h3>Emotion</h3>
                 <ul>
-                  <li>حالت پیش‌نمایش هدیه و کارت پیام <span class="future">آینده</span></li>
                   <li>تقویت داستان برند و حس خانگی در محتوا <span class="mvp">MVP</span></li>
+                  <li>حالت پیش‌نمایش هدیه + کارت پیام <span class="future">آینده</span></li>
                 </ul>
               </article>
             </div>
           </section>
 
+          <!-- ========== 13. DESIGN ========== -->
           <section id="design">
-            <h2>طراحی: وایرفریم و UI نهایی</h2>
+            <h2>۱۲. Design — وایرفریم و UI</h2>
             <p>
-              بر اساس Insightها، ساختار صفحه اصلی طوری چیده شد که از لحظه ورود،
-              اعتماد و شفافیت را بسازد — نه اینکه فقط کاتالوگ محصول باشد.
+              ساختار صفحه اصلی طوری چیده شد که از لحظه ورود، اعتماد و شفافیت را
+              بسازد — نه فقط کاتالوگ محصول. هر بخش به Insight مشخص وصل است.
             </p>
+
+            <div class="panel know">
+              <h3>تصمیم‌های طراحی ← Insight</h3>
+              <ul>
+                <li><strong>Hero + داستان برند</strong> ← Insight ۱ و ۸ (هویت انسانی و حس خانگی)</li>
+                <li><strong>قیمت و گام‌های سفارش روی صفحه</strong> ← Insight ۶ و ۴ (شفافیت و کنترل)</li>
+                <li><strong>نظرات و Social Proof</strong> ← Insight ۱ و ۲ (اعتماد اولیه)</li>
+                <li><strong>درباره ما / پشت‌صحنه</strong> ← Insight ۱ و ۳ (واقعی‌بودن و انسان)</li>
+                <li><strong>کالکشن مناسبتی / هدیه</strong> ← Insight ۷ (انگیزه احساسی)</li>
+                <li><strong>وضعیت ارسال و پیگیری</strong> ← Insight ۴، ۵ و ۱۰ (اضطراب بعد از پرداخت)</li>
+              </ul>
+            </div>
+
+            <h3>ساختار Homepage</h3>
             <ul>
               <li><strong>Hero</strong> — معرفی برند و وعده تجربه (اصالت + اعتماد)</li>
               <li><strong>دسته‌بندی و پرفروش‌ها</strong> — کاهش سردرگمی انتخاب</li>
               <li><strong>کالکشن ویژه</strong> — پشتیبانی از انگیزه مناسبتی / هدیه</li>
               <li><strong>نظرات</strong> — Social Proof برای پرسونای اعتمادمحور</li>
-              <li><strong>درباره ما و چرا ما</strong> — هویت انسانی و پشت‌صحنه برند</li>
+              <li><strong>درباره ما و چرا ما</strong> — هویت انسانی و پشت‌صحنه</li>
               <li><strong>Footer</strong> — دسترسی سریع به سفارش، ارسال و تماس</li>
             </ul>
-            <p>
-              UI نهایی با تصاویر واقعی محصول در Figma آماده شده است.
-            </p>
+
             <a
               class="figma-banner figma-banner-compact"
               href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l"
@@ -655,14 +697,15 @@
               </div>
               <span class="figma-banner-cta">باز کردن Figma ↗</span>
             </a>
+
             <figure class="cs-cover" style="margin-top: 1.4rem">
               <img
-            src="../assets/images/nill-wireframe.png"
-            alt="جزئیات وایرفریم صفحه اصلی نیل با annotationهای طراحی"
-            width="4425"
-            height="5767"
-            loading="lazy"
-            decoding="async"
+                src="../assets/images/nill-wireframe.png"
+                alt="جزئیات وایرفریم صفحه اصلی نیل با annotation"
+                width="4425"
+                height="5767"
+                loading="lazy"
+                decoding="async"
               />
               <figcaption>
                 هر بخش وایرفریم با annotation دلیل طراحی همراه است تا تصمیم‌ها به
@@ -671,20 +714,45 @@
             </figure>
           </section>
 
-          <section id="next">
-            <h2>نتیجه فعلی و گام‌های بعدی</h2>
+          <!-- ========== 14. OUTCOME + REFLECTION ========== -->
+          <section id="outcome">
+            <h2>۱۳. Outcome و Reflection</h2>
             <p>
               تا این مرحله، مسئله کسب‌وکار به یافته‌های قابل‌استناد کاربر وصل شده
-              و مسیر طراحی از تحقیق تا وایرفریم و UI نهایی در Figma شفاف است.
-              پروتوتایپ تعاملی و تست کاربردپذیری گام‌های بعدی‌اند.
+              و مسیر از تحقیق تا وایرفریم و UI نهایی در Figma شفاف است. لانچ و
+              متریک واقعی هنوز انجام نشده؛ بنابراین نتیجه را صادقانه در سطح
+              <strong>آمادگی طراحی</strong> گزارش می‌کنم، نه اعداد ساختگی.
             </p>
 
-            <div class="status-row">
+            <div class="two-col">
+              <div class="panel know">
+                <h3>چه چیز تحویل شد</h3>
+                <ul>
+                  <li>۵ مصاحبه + تحلیل الگو در Trust / Risk / Emotion / Post-purchase</li>
+                  <li>۱۰ Insight تصمیم‌ساز و ۲ پرسونا</li>
+                  <li>Journey Map و User Flow وضعیت فعلی</li>
+                  <li>HMW + ایده‌های MVP / Future</li>
+                  <li>وایرفریم Homepage با annotation</li>
+                  <li>UI نهایی در Figma</li>
+                </ul>
+              </div>
+              <div class="panel assume">
+                <h3>آموخته‌ها</h3>
+                <ul>
+                  <li>جدا کردن «آنچه می‌دانیم» از «فرض» از همان اول، تحقیق را دقیق‌تر کرد.</li>
+                  <li>قیمت پنهان برای کاربر = ریسک، نه جزئیات کمکی.</li>
+                  <li>اعتماد بعد از پرداخت تمام نمی‌شود؛ پیگیری بخشی از تجربه است.</li>
+                  <li>گام بعدی ضروری: پروتوتایپ تعاملی و تست کاربردپذیری قبل از توسعه.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="status-row" style="margin-top: 1.4rem">
               <span class="status-pill done">تحقیق و Insight</span>
               <span class="status-pill done">پرسونا و Journey</span>
-              <span class="status-pill done">HMW و ایده‌های MVP</span>
-              <span class="status-pill done">وایرفریم Homepage</span>
-              <span class="status-pill done">UI نهایی در Figma</span>
+              <span class="status-pill done">HMW و MVP</span>
+              <span class="status-pill done">وایرفریم</span>
+              <span class="status-pill done">UI در Figma</span>
               <span class="status-pill todo">پروتوتایپ و تست</span>
             </div>
 
