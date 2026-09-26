@@ -343,7 +343,7 @@ textarea {
   align-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--bg-deep);
+  background: #0f4c81;
 }
 
 /* Full-bleed work visual — soft, not competing with type */
@@ -362,16 +362,16 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  /* RTL: solid readable plane on the right (text), work peeks on the left */
+  /* RTL: readable blue plane on the right, work peeks on the left — not near-black */
   background:
     linear-gradient(
       to left,
-      rgba(18, 22, 28, 0.97) 0%,
-      rgba(18, 22, 28, 0.92) 34%,
-      rgba(15, 76, 129, 0.55) 62%,
-      rgba(18, 22, 28, 0.35) 100%
+      rgba(15, 76, 129, 0.82) 0%,
+      rgba(18, 55, 95, 0.72) 36%,
+      rgba(15, 76, 129, 0.42) 64%,
+      rgba(30, 58, 90, 0.22) 100%
     ),
-    linear-gradient(to top, rgba(18, 22, 28, 0.55), transparent 42%);
+    linear-gradient(to top, rgba(15, 55, 95, 0.35), transparent 50%);
 }
 
 @keyframes hero-zoom {
@@ -489,9 +489,9 @@ textarea {
     background:
       linear-gradient(
         to top,
-        rgba(18, 22, 28, 0.96) 0%,
-        rgba(18, 22, 28, 0.88) 48%,
-        rgba(15, 76, 129, 0.5) 100%
+        rgba(15, 76, 129, 0.88) 0%,
+        rgba(18, 55, 95, 0.72) 48%,
+        rgba(15, 76, 129, 0.4) 100%
       );
   }
 
