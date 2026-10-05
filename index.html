@@ -1,388 +1,367 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="پورتفولیوی مریم رافتی حمایتی — طراح UX/UI جونیور. از تحقیق کاربر تا طراحی رابط؛ پروژه‌ی شاخص شیرینی‌پزی نیل."
-    />
-    <meta name="author" content="مریم رافتی حمایتی" />
-    <meta name="theme-color" content="#0f4c81" />
-    <title>مریم رافتی حمایتی | طراح UX/UI جونیور</title>
-    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css?v=hero-revert-1" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مریم رافتی حمایتی | طراح UX/UI</title>
+<meta name="description" content="طراح UX/UI با پیش‌زمینهٔ مهندسی رباتیک. مسئله را با تحقیق کاربر تعریف می‌کنم، به تصمیم‌های طراحی قابل‌دفاع تبدیلش می‌کنم و تا رابط نهایی پیش می‌برم.">
+<meta name="author" content="Maryam Rafati Hemayati">
+<meta name="theme-color" content="#FAF8F5">
 
-    <header class="site-header">
-      <nav class="nav container" aria-label="منوی اصلی">
-        <a class="logo" href="index.html">مریم رافتی <span>حمایتی</span></a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-          aria-label="باز و بسته کردن منو"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links" id="primary-nav">
-          <li><a href="#about">درباره من</a></li>
-          <li><a href="#process">فرآیند</a></li>
-          <li><a href="#skills">مهارت‌ها</a></li>
-          <li><a href="#work">پروژه‌ها</a></li>
-          <li>
-            <a
-              class="nav-figma"
-              href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Figma</a
-            >
-          </li>
-          <li><a class="nav-cta" href="#contact">تماس</a></li>
-        </ul>
-      </nav>
-    </header>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:title" content="مریم رافتی حمایتی | طراح UX/UI">
+<meta property="og:description" content="مسئله را با تحقیق کاربر تعریف می‌کنم، به تصمیم‌های طراحی قابل‌دفاع تبدیلش می‌کنم و تا رابط نهایی پیش می‌برم.">
+<meta property="og:url" content="https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/">
+<meta property="og:image" content="https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/assets/images/nill/nill-ui-hero.png">
+<meta name="twitter:card" content="summary_large_image">
 
-    <main id="main">
-      <section class="hero" aria-label="معرفی">
-        <div class="container hero-inner">
-          <h1 class="hero-name reveal">مریم رافتی حمایتی</h1>
-          <p class="hero-role reveal reveal-delay-1">Junior UX/UI Designer</p>
-          <p class="hero-tagline reveal reveal-delay-2">از تحقیق کاربر تا طراحی رابط</p>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a class="btn btn-primary" href="case-studies/nill-pastry.html"
-              >مشاهده case study</a
-            >
-            <a class="btn btn-secondary" href="#contact">گفت‌وگو درباره همکاری</a>
-          </div>
-        </div>
-        <div class="scroll-hint" aria-hidden="true">
-          <span>ادامه</span>
-          <i></i>
-        </div>
-      </section>
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/">
+<link rel="preload" href="assets/fonts/Estedad-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
 
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="section-label">درباره من</p>
-            <h2 class="section-title">طراح جونیور با نگاه پژوهشی</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-text reveal">
-              <p>
-                طراح <span dir="ltr" lang="en">UX/UI</span> جونیور با کارشناسی مهندسی
-                رباتیک و بیش از سه سال تجربه‌ی تدریس. طراحی را از مصاحبه با کاربر
-                واقعی شروع می‌کنم و نیاز را به
-                <span dir="ltr" lang="en">User Flow</span>،
-                <span dir="ltr" lang="en">Wireframe</span> و رابط در
-                <span dir="ltr" lang="en">Figma</span> تبدیل می‌کنم.
-              </p>
-              <p>
-                از مسیر مهندسی به طراحی آمده‌ام؛ جایی که می‌توانم مسئله را دقیق
-                تعریف کنم و راه‌حلی بسازم که هم کاربردی باشد و هم حس خوبی منتقل کند.
-                تدریس رباتیک هم تمرین گوش‌دادن، همدلی و روشن کردن مسیرهای پیچیده
-                بود — مهارت‌هایی که در تحقیق کاربر به کار می‌آیند.
-              </p>
-              <div class="tags" aria-label="مهارت‌های کلیدی" dir="ltr" lang="en">
-                <span class="tag">UX Research</span>
-                <span class="tag">Figma</span>
-                <span class="tag">Wireframing</span>
-                <span class="tag">UI Design</span>
-              </div>
-            </div>
-            <aside class="about-aside reveal reveal-delay-1" aria-label="خلاصه حرفه‌ای">
-              <h3>در یک نگاه</h3>
-              <ul class="meta-list">
-                <li>
-                  <strong>نقش هدف</strong>
-                  <span>Junior UX/UI (شروع از UX)</span>
-                </li>
-                <li>
-                  <strong>پیشینه</strong>
-                  <span>کارشناسی مهندسی رباتیک</span>
-                </li>
-                <li>
-                  <strong>تجربه</strong>
-                  <span>بیش از ۳ سال تدریس رباتیک</span>
-                </li>
-                <li>
-                  <strong>موقعیت</strong>
-                  <span>تهران · حضوری / هیبرید / دورکار</span>
-                </li>
-                <li>
-                  <strong>ابزار اصلی</strong>
-                  <span dir="ltr" lang="en">Figma · FigJam · Notion</span>
-                </li>
-              </ul>
-            </aside>
-          </div>
-        </div>
-      </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "مریم رافتی حمایتی",
+  "alternateName": "Maryam Rafati Hemayati",
+  "jobTitle": "طراح UX/UI",
+  "email": "mailto:maryamrafatih@gmail.com",
+  "url": "https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/",
+  "sameAs": ["https://www.linkedin.com/in/maryamrafati", "https://github.com/maryamrafatihemayati"],
+  "address": { "@type": "PostalAddress", "addressLocality": "تهران", "addressCountry": "IR" },
+  "knowsAbout": ["UX Research", "User Interview", "Information Architecture", "UI Design", "Design Thinking", "Figma"]
+}
+</script>
+</head>
 
-      <section class="section" id="process" style="padding-top: 0">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="section-label">فرآیند طراحی من</p>
-            <h2 class="section-title">از مصاحبه تا رابط</h2>
-            <p class="section-desc">
-              تصمیم‌ها را بر اساس شواهد کاربر می‌گیرم، نه حدس. مسیر کاری‌ام
-              تکرارشونده است: تحقیق، تعریف مسئله، طراحی، و بازگشت برای اصلاح.
-            </p>
-          </div>
+<body>
+<a class="skip-link" href="#main">پرش به محتوای اصلی</a>
 
-          <p class="process-intro reveal">
-            در پروژه‌ی نیل این مسیر را کامل طی کردم:
-          </p>
-          <p class="process-flow reveal" dir="ltr" lang="en">
-            Interview → Insights → Persona → Journey Map → User Flow → Wireframe → UI
-          </p>
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <nav class="nav" aria-label="ناوبری اصلی">
+      <a class="brand" href="#top">
+        <b>مریم رافتی حمایتی</b>
+        <span>UX/UI Designer</span>
+      </a>
 
-          <div class="process-steps">
-            <article class="process-step reveal">
-              <span class="step-num">۰۱</span>
-              <h3>تحقیق و همدلی</h3>
-              <p>مصاحبه‌ی رفتارمحور و شنیدن نگرانی‌های واقعی کاربر در مسیر خرید.</p>
-            </article>
-            <article class="process-step reveal reveal-delay-1">
-              <span class="step-num">۰۲</span>
-              <h3>یافته و تعریف مسئله</h3>
-              <p>استخراج الگوها، Insight و تبدیل آن‌ها به مسئله‌ی شفاف و قابل‌حل.</p>
-            </article>
-            <article class="process-step reveal reveal-delay-2">
-              <span class="step-num">۰۳</span>
-              <h3>مدل‌سازی کاربر</h3>
-              <p>پرسونا، نقشه سفر و جریان کاربری برای دیدن نقاط درد و فرصت.</p>
-            </article>
-            <article class="process-step reveal">
-              <span class="step-num">۰۴</span>
-              <h3>وایرفریم و UI</h3>
-              <p>ساختار صفحه و رابط در Figma با تمرکز بر اعتماد و شفافیت سفارش.</p>
-            </article>
-            <article class="process-step reveal reveal-delay-1">
-              <span class="step-num">۰۵</span>
-              <h3>یادگیری بعدی</h3>
-              <p>پروتوتایپ تعاملی و تست کاربردپذیری گام‌های بعدی برای اعتبارسنجی.</p>
-            </article>
-          </div>
+      <ul class="nav-links">
+        <li><a href="#work">نمونه‌کار</a></li>
+        <li><a href="#process">فرایند</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#skills">مهارت‌ها</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
 
-          <p class="process-loop reveal">
-            این فرآیند خطی نیست؛ حلقه‌ای بین تحقیق، طراحی و بازبینی است تا هر
-            تصمیم به شواهد کاربر وصل بماند.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="skills" style="padding-top: 0">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="section-label">مهارت‌ها و ابزارها</p>
-            <h2 class="section-title">آنچه واقعاً کار می‌کنم</h2>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-group reveal">
-              <h3 dir="ltr" lang="en">Research</h3>
-              <ul dir="ltr" lang="en">
-                <li>UX Research</li>
-                <li>User Interview</li>
-                <li>Persona</li>
-                <li>Journey Map</li>
-                <li>User Flow</li>
-                <li>Information Architecture</li>
-              </ul>
-            </div>
-            <div class="skill-group reveal reveal-delay-1">
-              <h3 dir="ltr" lang="en">UI Design</h3>
-              <ul dir="ltr" lang="en">
-                <li>Wireframing</li>
-                <li>Prototyping</li>
-                <li>UI Design</li>
-                <li>Visual Hierarchy</li>
-              </ul>
-            </div>
-            <div class="skill-group reveal reveal-delay-2">
-              <h3 dir="ltr" lang="en">Tools</h3>
-              <ul dir="ltr" lang="en">
-                <li>Figma</li>
-                <li>FigJam</li>
-                <li>Notion</li>
-                <li>HTML/CSS (Familiar)</li>
-              </ul>
-            </div>
-            <div class="skill-group reveal">
-              <h3 dir="ltr" lang="en">Language</h3>
-              <ul dir="ltr" lang="en">
-                <li>English (Intermediate)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="work" style="padding-top: 0">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="section-label">پروژه‌ها</p>
-            <h2 class="section-title">پروژه‌ی منتخب</h2>
-            <p class="section-desc">
-              یک کیس کامل از Overview تا Design و Reflection — مستندشده با تحقیق
-              واقعی کاربر، با تمرکز بر اعتماد، شفافیت ارسال و مسیر سفارش.
-            </p>
-          </div>
-
-          <a
-            class="project-feature reveal"
-            href="case-studies/nill-pastry.html"
-            aria-label="مشاهده case study نیل پستری"
-          >
-            <div class="project-media" role="img" aria-label="پیش‌نمایش وایرفریم نیل"></div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="chip">پروژه شخصی</span>
-                <span class="chip" dir="ltr" lang="en">UX → UI</span>
-                <span class="chip">برند خانوادگی</span>
-              </div>
-              <h3>شیرینی‌پزی نیل</h3>
-              <p>
-                از سفارش پراکنده‌ی اینستاگرام و تلگرام به مسیر شفاف‌تر خرید آنلاین؛
-                با ۵ مصاحبه، ۱۰ Insight، وایرفریم و UI در Figma.
-              </p>
-              <div class="project-stats">
-                <div>
-                  <strong>۵</strong>
-                  <span>مصاحبه واقعی</span>
-                </div>
-                <div>
-                  <strong>۱۰</strong>
-                  <span>Insight کلیدی</span>
-                </div>
-                <div>
-                  <strong>۲</strong>
-                  <span>پرسونای نهایی</span>
-                </div>
-              </div>
-              <span class="btn btn-primary">مطالعه کامل case study ←</span>
-            </div>
-          </a>
-
-          <a
-            class="figma-banner reveal"
-            href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="figma-banner-text">
-              <span class="figma-banner-label">طراحی UI نهایی</span>
-              <strong>مشاهده فایل Figma پروژه نیل</strong>
-              <span class="figma-banner-hint">کلیک کنید تا طراحی کامل با تصاویر واقعی باز شود</span>
-            </div>
-            <span class="figma-banner-cta">باز کردن Figma ↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="section-label">تماس</p>
-            <h2 class="section-title">برای همکاری در دسترس‌ام</h2>
-          </div>
-          <div class="contact-panel">
-            <div class="contact-copy reveal">
-              <p>
-                اگر به‌دنبال طراح Junior UX/UI هستید که تحقیق را به تصمیم طراحی
-                وصل کند و تجربه را از نگاه کاربر بسازد، خوشحال می‌شوم گفت‌وگو
-                کنیم.
-              </p>
-              <div class="contact-links">
-                <a class="contact-link" href="mailto:maryamrafatih@gmail.com">
-                  <span>
-                    <strong>ایمیل</strong>
-                    maryamrafatih@gmail.com
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a class="contact-link" href="tel:+989359390323" dir="ltr">
-                  <span>
-                    <strong>تلفن / تلگرام / واتساپ</strong>
-                    ۰۹۳۵ ۹۳۹ ۰۳۲۳
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  class="contact-link"
-                  href="https://www.linkedin.com/in/maryamrafati/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>
-                    <strong>لینکدین</strong>
-                    linkedin.com/in/maryamrafati
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  class="contact-link"
-                  href="https://www.figma.com/design/LCT64nO02nd3zQWZebhM3l"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>
-                    <strong>Figma</strong>
-                    طراحی UI شیرینی‌پزی نیل
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  class="contact-link"
-                  href="resume/Maryam-Rafati-UXUI-Resume.pdf"
-                  download
-                >
-                  <span>
-                    <strong>رزومه</strong>
-                    دانلود PDF
-                  </span>
-                  <span aria-hidden="true">↓</span>
-                </a>
-              </div>
-            </div>
-            <aside class="contact-aside reveal reveal-delay-1">
-              <div>
-                <h3>الان دنبال چه نقشی هستم؟</h3>
-                <p>
-                  به‌دنبال نقش Junior UX/UI در تیم‌های محصول هستم — با شروع از
-                  UX (تحقیق و تجربه) و رشد به‌سمت UI. مقیم تهران؛ آماده‌ام
-                  حضوری، هیبرید یا دورکار همکاری کنم.
-                </p>
-              </div>
-              <a class="btn btn-primary" href="mailto:maryamrafatih@gmail.com"
-                >ارسال ایمیل</a
-              >
-            </aside>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span data-year>2026</span> مریم رافتی حمایتی — از تحقیق کاربر تا طراحی رابط</p>
-        <p>ساخته‌شده با HTML · CSS · JS</p>
+      <div class="nav-actions">
+        <a class="btn btn--ghost btn--sm" href="resume/Maryam-Rafati-UXUI-Resume.pdf" download>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          رزومه
+        </a>
       </div>
-    </footer>
+    </nav>
+  </div>
+</header>
 
-    <script src="js/main.js"></script>
-  </body>
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ هیرو ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">طراح UX/UI · تهران</p>
+        <h1>مسئله را با <em>تحقیق</em> تعریف می‌کنم، نه با حدس.</h1>
+        <p class="hero-sub">
+          پیش‌زمینهٔ مهندسی رباتیک دارم و بیش از چهار سال رباتیک تدریس کرده‌ام.
+          همان کاری که در کلاس انجام می‌دادم، یعنی یافتن نقطهٔ دقیق ابهام هر دانش‌آموز و بازطراحی توضیح متناسب با او،
+          امروز در مصاحبهٔ کاربر و ساده‌سازی مسیرهای پیچیده به کار می‌برم.
+          از تحقیق آغاز می‌کنم، به تصمیم‌های طراحی قابل‌دفاع می‌رسم و تا رابط نهایی در Figma پیش می‌برم.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href="case-studies/nill-pastry.html">
+            خواندن کیس‌استادی نیل
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">تماس برای همکاری</a>
+        </div>
+
+        <ul class="hero-meta">
+          <li><span class="dot" aria-hidden="true"></span> آمادهٔ همکاری</li>
+          <li>حضوری · ترکیبی · دورکار</li>
+          <li>Figma · FigJam · Notion</li>
+        </ul>
+      </div>
+
+      <figure class="hero-visual">
+        <img src="assets/images/nill/nill-ui-hero.png"
+             alt="بخش هیروی رابط کاربری طراحی‌شده برای شیرینی‌پزی نیل: جعبهٔ شیرینی نخودچی با روبان آبی و عنوان «نخودچی و هل»"
+             width="1980" height="813" fetchpriority="high">
+        <figcaption>از پروژهٔ شیرینی‌پزی نیل، رابط نهایی در Figma</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ نمونه‌کار ============ -->
+<section class="section section--alt" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">نمونه‌کار</p>
+      <h2>یک پروژه، از تحقیق تا رابط نهایی</h2>
+      <p>
+        ترجیح می‌دهم یک مسئلهٔ واقعی را به‌صورت کامل ارائه کنم تا چند کار ناتمام.
+        این کیس‌استادی تمام مسیر تصمیم‌گیری را شرح می‌دهد، از جمله نقاطی که
+        داده‌ای در اختیار نداشتم و بر پایهٔ فرض پیش رفتم.
+      </p>
+    </div>
+
+    <article class="work-card reveal">
+      <div class="work-card__media">
+        <img src="assets/images/nill/nill-ui-desktop.png"
+             alt="نمای کامل صفحهٔ اصلی دسکتاپ شیرینی‌پزی نیل شامل هیرو، دسته‌بندی محصولات، نظرات مشتریان و داستان برند"
+             loading="lazy" width="1616" height="4000">
+      </div>
+
+      <div class="work-card__body">
+        <div class="tag-row">
+          <span class="tag tag--accent">تنها طراح پروژه</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">اسفند ۱۴۰۴ تا تیر ۱۴۰۵</span>
+        </div>
+
+        <h3 style="font-size:var(--step-2)">شیرینی‌پزی نیل: از دایرکت اینستاگرام تا مسیر خرید روشن</h3>
+
+        <p class="muted" style="font-size:var(--step--1)">
+          سفارش‌ها تنها از دایرکت ثبت می‌شد و قیمت، گام‌های خرید و شرایط ارسال از کرج به تهران
+          برای مشتری روشن نبود. پنج مصاحبهٔ رفتارمحور نشان داد مسئله «نبود سایت» نیست؛
+          <strong>نبود قطعیت</strong> است. اعتماد، شفافیت قیمت و اطلاع‌رسانی پس از پرداخت
+          را به ستون‌های اصلی طراحی تبدیل کردم.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat"><b>۵</b><span>مصاحبهٔ عمیق</span></div>
+          <div class="stat"><b>۱۰</b><span>یافتهٔ کلیدی</span></div>
+          <div class="stat"><b>۲</b><span>پرسونا</span></div>
+          <div class="stat"><b>۳</b><span>مانع اصلی خرید</span></div>
+        </div>
+
+        <div class="btn-row" style="margin-top:auto">
+          <a class="btn btn--primary" href="case-studies/nill-pastry.html">
+            دیدن کیس‌استادی کامل
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ فرایند ============ -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">فرایند</p>
+      <h2>چطور کار می‌کنم</h2>
+      <p>
+        بر پایهٔ Design Thinking، اما نه به‌عنوان یک دستورالعمل خطی.
+        هر جا تست نتیجهٔ تازه‌ای داد، به مرحلهٔ عقب‌تر برمی‌گردم.
+      </p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <h3>همدلی و تحقیق</h3>
+        <p>مصاحبهٔ رفتارمحور دربارهٔ کاری که کاربر واقعاً کرده، نه نظری که دارد. هدف کشف الگوست، نه تأیید فرض.</p>
+      </div>
+      <div class="step">
+        <h3>تعریف مسئله</h3>
+        <p>جدا کردن «آنچه می‌دانیم» از «آنچه فرض می‌کنیم»، استخراج بینش و ساختن پرسونا و نقشهٔ سفر از دل داده.</p>
+      </div>
+      <div class="step">
+        <h3>ایده‌پردازی</h3>
+        <p>تبدیل هر بینش به پرسش «چطور می‌توانیم…» و تولید ایده‌های فراوان، سپس اولویت‌بندی به MVP و فاز بعد.</p>
+      </div>
+      <div class="step">
+        <h3>طراحی</h3>
+        <p>معماری اطلاعات و جریان کاربر، بعد وایرفریم و در آخر رابط نهایی؛ هر بخش پاسخ به یک بینش مشخص.</p>
+      </div>
+      <div class="step">
+        <h3>تست و تکرار</h3>
+        <p>تعریف معیار سنجش پیش از طراحی، گرفتن بازخورد روی پروتوتایپ و برگشت به تحقیق تا رسیدن به نتیجهٔ مطلوب.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ درباره ============ -->
+<section class="section section--alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow">درباره من</p>
+        <h2>از رباتیک به تجربهٔ کاربری</h2>
+        <p class="lede">
+          مهندسی رباتیک خواندم و چهار سال به کودکان و نوجوانان رباتیک درس دادم.
+          آن سال‌ها یاد گرفتم که مشکل معمولاً جایی نیست که آدم‌ها می‌گویند.
+        </p>
+        <p>
+          دانش‌آموزی که می‌گفت «این درس سخت است» معمولاً یک گام مشخص را جا انداخته بود.
+          وظیفهٔ من یافتن همان گام بود: گوش دادن فعال، طرح پرسش درست و سپس بازطراحی توضیح
+          متناسب با همان فرد. امروز همین رویکرد را در مصاحبهٔ کاربر به کار می‌برم،
+          با این تفاوت که خروجی به‌جای یک توضیح تازه، یک تصمیم طراحی است.
+        </p>
+        <p>
+          پیش‌زمینهٔ فنی به من کمک می‌کند امکان‌پذیری راه‌حل‌ها را بسنجم و با تیم توسعه
+          زبان مشترک داشته باشم. HTML و CSS را در حدی می‌دانم که ساختار یک رابط را بخوانم
+          و خواستهٔ طراحی را دقیق، روشن و قابل‌اجرا به برنامه‌نویس منتقل کنم.
+        </p>
+        <p>
+          آنچه از رباتیک با خودم آوردم تفکر تحلیلی است و آنچه مرا به طراحی کشاند،
+          حل مسئله و زیبایی‌شناسی. امروز سه معیار برای یک راه‌حل خوب دارم:
+          از درک واقعی آدم‌ها آمده باشد، در دنیای واقعی قابل ساخت باشد،
+          و بتوانم از تک‌تک تصمیم‌هایش دفاع کنم.
+        </p>
+
+        <div class="btn-row" style="margin-top:28px">
+          <a class="btn btn--ghost" href="resume/Maryam-Rafati-UXUI-Resume.pdf" download>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            دانلود رزومه (PDF)
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <ol class="timeline">
+          <li>
+            <time>۱۴۰۳ تا ۱۴۰۴</time>
+            <b>تغییر مسیر حرفه‌ای به UI/UX</b>
+            <p>خودآموزی متمرکز روی Design Thinking، روش‌های تحقیق کاربر، معماری اطلاعات و طراحی رابط در Figma.</p>
+          </li>
+          <li>
+            <time>دی ۱۳۹۹ تا اسفند ۱۴۰۳</time>
+            <b>مدرس رباتیک در باشگاه رباتیک باغ کتاب</b>
+            <p>آموزش رباتیک به کودکان و نوجوانان؛ ترجمهٔ مفاهیم فنی به زبان ساده و مسیر گام‌به‌گام.</p>
+          </li>
+          <li>
+            <time>مهر ۱۳۹۶ تا شهریور ۱۴۰۱</time>
+            <b>کارشناسی مهندسی رباتیک</b>
+            <p>دانشگاه آزاد اسلامی، واحد تهران مرکز.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ مهارت‌ها ============ -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">مهارت‌ها</p>
+      <h2>آنچه با آن کار می‌کنم</h2>
+    </div>
+
+    <div class="grid grid--2 reveal">
+      <div class="card">
+        <div class="skill-group">
+          <h3>تحقیق</h3>
+          <ul class="chip-list">
+            <li>Design Thinking</li><li>UX Research</li><li>User Interview</li>
+            <li>Persona</li><li>User Journey Map</li><li>User Flow</li>
+            <li>Information Architecture</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>طراحی</h3>
+          <ul class="chip-list">
+            <li>Wireframing</li><li>UI Design</li><li>Visual Hierarchy</li>
+            <li>Interaction Design</li><li>E-commerce UX</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-group">
+          <h3>ابزار</h3>
+          <ul class="chip-list">
+            <li>Figma</li><li>FigJam</li><li>Notion</li><li>Excalidraw</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>آشنایی</h3>
+          <ul class="chip-list">
+            <li>Prototyping</li><li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>زبان</h3>
+          <ul class="chip-list">
+            <li>فارسی: زبان مادری</li><li>English: Intermediate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ تماس ============ -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">تماس</p>
+      <h2>برای همکاری در دسترسم</h2>
+      <p>
+        در جست‌وجوی نقش طراح UX/UI هستم؛ به‌صورت حضوری، ترکیبی یا دورکار.
+        اگر کیس‌استادی را مطالعه کردید و پرسشی دربارهٔ تصمیم‌های آن دارید، مشتاق گفت‌وگو هستم.
+      </p>
+    </div>
+
+    <ul class="contact-list reveal">
+      <li>
+        <a href="mailto:maryamrafatih@gmail.com">
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <span><b>ایمیل</b><span class="ltr">maryamrafatih@gmail.com</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="tel:+989359390323">
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><b>تلفن</b><span class="ltr">0935 939 0323</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/maryamrafati" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9z"/></svg></span>
+          <span><b>LinkedIn</b><span class="ltr">in/maryamrafati</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/maryamrafatihemayati" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>
+          <span><b>GitHub</b><span class="ltr">maryamrafatihemayati</span></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p style="margin:0">© <span class="num">۱۴۰۴</span> مریم رافتی حمایتی · طراح UX/UI</p>
+      <p style="margin:0"><a href="mailto:maryamrafatih@gmail.com">maryamrafatih@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
 </html>

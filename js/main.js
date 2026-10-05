@@ -1,88 +1,66 @@
-(() => {
-  const header = document.querySelector(".site-header");
-  const toggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
+/* پورتفولیو مریم رافتی — تعامل‌های سبک */
+(function () {
+  "use strict";
 
-  const setNavOpen = (open) => {
-    if (!toggle || !navLinks) return;
-    toggle.setAttribute("aria-expanded", String(open));
-    navLinks.classList.toggle("is-open", open);
-    document.body.classList.toggle("nav-open", open);
-  };
-
-  const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 8);
-  };
-
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  if (toggle && navLinks) {
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      setNavOpen(!open);
-    });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => setNavOpen(false));
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") setNavOpen(false);
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.matchMedia("(min-width: 721px)").matches) {
-        setNavOpen(false);
-      }
-    });
+  /* ---- سایهٔ هدر هنگام اسکرول ---- */
+  var header = document.getElementById("siteHeader");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-stuck", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+  /* ---- ظهور تدریجی بخش‌ها ---- */
+  var revealables = document.querySelectorAll(".reveal");
+  if (revealables.length) {
+    if (!("IntersectionObserver" in window) ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealables.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
           }
         });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      revealables.forEach(function (el) { revealObserver.observe(el); });
+    }
   }
 
-  const tocLinks = document.querySelectorAll(".cs-toc a[href^='#']");
-  const sections = [...tocLinks]
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+  /* ---- پررنگ‌کردن بخش جاری در ناوبری و فهرست کیس‌استادی ---- */
+  var navLinks = Array.prototype.slice.call(
+    document.querySelectorAll('.nav-links a[href^="#"], .cs-toc a[href^="#"]')
+  );
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var targets = navLinks
+      .map(function (link) { return document.querySelector(link.getAttribute("href")); })
+      .filter(Boolean);
 
-  if (tocLinks.length && sections.length && "IntersectionObserver" in window) {
-    const tocObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const id = entry.target.getAttribute("id");
-          tocLinks.forEach((link) => {
-            link.classList.toggle(
-              "is-active",
-              link.getAttribute("href") === `#${id}`
-            );
-          });
-        });
-      },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
-    );
-    sections.forEach((section) => tocObserver.observe(section));
+    var setActive = function (id) {
+      navLinks.forEach(function (link) {
+        link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+      });
+    };
+
+    var visible = new Map();
+    var sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) visible.set(entry.target.id, entry.intersectionRatio);
+        else visible.delete(entry.target.id);
+      });
+      if (!visible.size) return;
+      var best = null, bestTop = Infinity;
+      visible.forEach(function (_, id) {
+        var top = document.getElementById(id).getBoundingClientRect().top;
+        if (Math.abs(top) < bestTop) { bestTop = Math.abs(top); best = id; }
+      });
+      if (best) setActive(best);
+    }, { rootMargin: "-20% 0px -65% 0px", threshold: [0, 0.25, 0.6] });
+
+    targets.forEach(function (el) { sectionObserver.observe(el); });
   }
-
-  const year = String(new Date().getFullYear());
-  document.querySelectorAll("[data-year]").forEach((el) => {
-    el.textContent = year;
-  });
 })();
