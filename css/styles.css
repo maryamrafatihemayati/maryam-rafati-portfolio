@@ -334,6 +334,7 @@ textarea {
 }
 
 /* ---------- Hero ---------- */
+/* Identity-first: soft atmosphere, no project product photo */
 .hero {
   position: relative;
   min-height: calc(100svh - var(--nav-h));
@@ -341,6 +342,7 @@ textarea {
   align-items: center;
   overflow: hidden;
   isolation: isolate;
+  background: #f3f6f9;
 }
 
 .hero::before {
@@ -349,10 +351,10 @@ textarea {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(115deg, rgba(18, 22, 28, 0.88) 0%, rgba(15, 76, 129, 0.62) 48%, rgba(18, 22, 28, 0.78) 100%),
-    url("../assets/images/nill-wireframe.png") center/cover no-repeat;
-  transform: scale(1.04);
-  animation: hero-zoom 18s var(--ease) infinite alternate;
+    radial-gradient(900px 520px at 88% 12%, rgba(15, 76, 129, 0.16), transparent 58%),
+    radial-gradient(720px 480px at 8% 78%, rgba(61, 90, 91, 0.12), transparent 55%),
+    radial-gradient(640px 420px at 52% 42%, rgba(15, 76, 129, 0.06), transparent 60%),
+    linear-gradient(165deg, #f8fafc 0%, #eef3f8 48%, #e7eef5 100%);
 }
 
 .hero::after {
@@ -360,20 +362,25 @@ textarea {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.1), transparent 42%),
-    linear-gradient(to top, rgba(18, 22, 28, 0.4), transparent 48%);
+  opacity: 0.45;
+  background-image:
+    linear-gradient(rgba(15, 76, 129, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 76, 129, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 42%, #000 20%, transparent 75%);
+  animation: hero-grid-drift 22s linear infinite alternate;
 }
 
-@keyframes hero-zoom {
-  from { transform: scale(1.02); }
-  to { transform: scale(1.08); }
+@keyframes hero-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 18px 12px, 18px 12px; }
 }
 
 .hero-inner {
+  position: relative;
   padding: clamp(3.5rem, 8vw, 6.5rem) 0;
-  color: #fff;
-  max-width: 720px;
+  color: var(--ink);
+  max-width: 760px;
   margin-inline: auto;
   text-align: center;
 }
@@ -382,7 +389,7 @@ textarea {
   display: inline-block;
   margin: 0 0 1.25rem;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
   letter-spacing: 0.02em;
 }
 
@@ -392,27 +399,35 @@ textarea {
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.03em;
+  color: var(--ink);
   text-wrap: balance;
 }
 
 .hero-role {
-  margin: 0.85rem 0 0;
+  margin: 0.9rem 0 0;
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
   font-weight: 600;
-  color: rgba(186, 214, 240, 0.95);
+  color: var(--accent);
   letter-spacing: 0.02em;
   direction: ltr;
   unicode-bidi: isolate;
 }
 
 .hero-tagline {
-  margin: 1rem auto 0;
+  margin: 1.1rem auto 0;
   font-size: clamp(1.05rem, 2.4vw, 1.25rem);
   font-weight: 500;
-  line-height: 1.55;
-  max-width: 28ch;
+  line-height: 1.75;
+  max-width: 34ch;
   text-align: center;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+}
+
+.hero-tagline span {
+  display: block;
 }
 
 .hero-actions {
@@ -424,23 +439,25 @@ textarea {
 }
 
 .hero .btn-primary {
-  background: #fff;
-  color: var(--ink);
-  box-shadow: none;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 28px var(--accent-glow);
 }
 
 .hero .btn-primary:hover {
-  background: #e8eef4;
+  background: var(--accent-deep);
 }
 
 .hero .btn-secondary {
-  border-color: rgba(255, 255, 255, 0.45);
-  color: #fff;
+  border-color: var(--line-strong);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
 }
 
 .hero .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
+  border-color: var(--ink);
+  background: #fff;
 }
 
 .scroll-hint {
@@ -448,7 +465,7 @@ textarea {
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--muted);
   font-size: 0.85rem;
   display: flex;
   flex-direction: column;
@@ -460,7 +477,7 @@ textarea {
 .scroll-hint i {
   width: 1px;
   height: 28px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+  background: linear-gradient(to bottom, rgba(15, 76, 129, 0.55), transparent);
 }
 
 @keyframes float-y {
@@ -750,8 +767,59 @@ textarea {
   min-height: 340px;
   height: 100%;
   background:
-    linear-gradient(160deg, rgba(18, 22, 28, 0.2), rgba(15, 76, 129, 0.35)),
+    linear-gradient(160deg, rgba(18, 22, 28, 0.15), rgba(15, 76, 129, 0.28)),
     url("../assets/images/nill-wireframe.png") top center / cover no-repeat;
+}
+
+.project-media-ui {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.35rem 1.25rem 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(15, 76, 129, 0.35), transparent 60%),
+    linear-gradient(180deg, #1a2430 0%, #12161c 100%);
+  overflow: hidden;
+}
+
+.project-media-ui img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.project-outcomes {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.project-outcomes li {
+  position: relative;
+  padding-right: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.project-outcomes li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(186, 214, 240, 0.95);
 }
 
 .project-body {
@@ -963,7 +1031,7 @@ textarea {
 .contact-aside {
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(160deg, rgba(42, 35, 32, 0.96), rgba(143, 63, 44, 0.92)),
+    linear-gradient(160deg, rgba(18, 22, 28, 0.98), rgba(15, 76, 129, 0.92)),
     var(--bg-deep);
   color: #fff;
   padding: clamp(1.8rem, 4vw, 2.6rem);
@@ -971,6 +1039,35 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   min-height: 280px;
+}
+
+/* ---------- Process compact (homepage) ---------- */
+.process-compact {
+  margin-top: clamp(2.2rem, 5vw, 3.2rem);
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
+}
+
+.process-compact-label {
+  margin: 0 0 0.65rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.process-compact .process-flow {
+  margin: 0 0 0.85rem;
+  max-width: none;
+}
+
+.process-compact-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .contact-aside h3 {
@@ -1029,10 +1126,22 @@ textarea {
 
 .cs-hero h1 {
   margin: 0;
+  color: var(--ink);
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
-  max-width: 16ch;
+  max-width: 22ch;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.cs-title-sub {
+  display: block;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 28ch;
 }
 
 .cs-hero .lede {
@@ -1040,6 +1149,133 @@ textarea {
   max-width: 62ch;
   color: var(--ink-soft);
   font-size: 1.12rem;
+}
+
+.impact-strip {
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.impact-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+  border-top: 3px solid var(--accent);
+}
+
+.impact-item strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.impact-item span {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.theme-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.15rem;
+}
+
+.theme-card h3 {
+  margin: 0 0 0.85rem !important;
+  font-size: 1.05rem;
+  color: var(--accent-deep);
+}
+
+.theme-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.theme-card li {
+  position: relative;
+  padding-right: 0.95rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.theme-card li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.design-gallery {
+  display: grid;
+  gap: 1.4rem;
+  margin: 1.6rem 0 0;
+}
+
+.cs-cover-ui {
+  overflow: hidden;
+  background: #fff;
+}
+
+.cs-ui-preview {
+  display: grid;
+  gap: 0;
+  background: #fff;
+}
+
+.cs-ui-preview img,
+.media-natural img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center top;
+  display: block;
+}
+
+.ui-scroll {
+  max-height: min(78vh, 840px);
+  overflow: auto;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.ui-scroll img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+.cs-cover .figcaption-hint {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--soft, #8b959e);
 }
 
 .cs-overview {
@@ -1090,8 +1326,43 @@ textarea {
 .cs-cover img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4425 / 5767;
-  background: var(--bg-soft);
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  aspect-ratio: auto;
+  background: #fff;
+}
+
+.path-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.path-rail a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.cs-hero .path-rail {
+  margin-top: 1.35rem;
+  margin-bottom: 0;
+}
+
+.step-lead {
+  margin: 0 0 1rem;
+  color: var(--accent-deep);
+  font-weight: 600;
 }
 
 .cs-cover figcaption {
@@ -1485,6 +1756,35 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.support-list {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.support-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+}
+
+.support-list li strong {
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .idea-card h3 {
   margin: 0 0 0.75rem;
   font-size: 1.05rem;
@@ -1617,7 +1917,17 @@ textarea {
   .persona-grid,
   .two-col,
   .goals,
-  .idea-grid {
+  .idea-grid,
+  .impact-strip,
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .theme-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1683,7 +1993,9 @@ textarea {
   .process-steps,
   .skills-grid,
   .cs-overview,
-  .project-stats {
+  .project-stats,
+  .impact-strip,
+  .question-grid {
     grid-template-columns: 1fr;
   }
 
