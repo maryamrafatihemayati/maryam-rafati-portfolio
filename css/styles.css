@@ -116,6 +116,9 @@ a:hover { text-decoration-thickness: 2px; }
 
 img { max-width: 100%; height: auto; display: block; }
 
+/* picture فقط ظرف انتخاب فرمت است و نباید در چیدمان دخالت کند */
+picture { display: contents; }
+
 ul, ol { margin: 0 0 1.1em; padding-inline-start: 1.3em; }
 li { margin-bottom: .45em; }
 li:last-child { margin-bottom: 0; }
