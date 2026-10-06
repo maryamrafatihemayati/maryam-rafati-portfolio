@@ -1,0 +1,12 @@
+{
+  "name": "maryam-rafati-portfolio",
+  "private": true,
+  "type": "module",
+  "description": "پورتفولیو مریم رافتی حمایتی — بررسی‌های خودکار پیش از انتشار",
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
