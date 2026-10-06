@@ -344,7 +344,7 @@ strong, b { color: var(--ink); font-weight: 600; }
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 22%, transparent);
 }
 
-/* بنر هیرو — نسبت طبیعی تصویر (۱۹۸۰×۸۱۳)، بدون برش */
+/* بنر هیرو — نسبت طبیعی تصویر (۱۹۸۰×۷۷۹)، بدون برش */
 .hero-visual {
   position: relative;
   border-radius: var(--r-lg);
@@ -356,7 +356,7 @@ strong, b { color: var(--ink); font-weight: 600; }
 }
 .hero-visual img {
   width: 100%;
-  aspect-ratio: 1980 / 813;
+  aspect-ratio: 1980 / 779;
   object-fit: cover;
   object-position: center;
 }
@@ -990,6 +990,53 @@ td strong { color: var(--ink); font-weight: 600; }
 .note b { display: block; color: var(--ink); margin-bottom: 4px; }
 .note p { margin: 0; color: var(--ink-2); }
 .note--accent { border-inline-start-color: var(--accent); background: var(--accent-soft); }
+
+/* سیستم رنگ */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 12px;
+  margin-block: 20px;
+}
+.swatch {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--surface);
+}
+.swatch .chip {
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 12px;
+  font-size: .72rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+}
+.swatch .meta { padding: 10px 12px; }
+.swatch b { display: block; font-size: var(--step--1); font-weight: 600; color: var(--ink); }
+.swatch span { display: block; font-size: .72rem; color: var(--muted); line-height: 1.6; }
+
+/* مقیاس تایپوگرافی */
+.type-scale { margin-block: 20px; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+.type-scale > div {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.type-scale > div:last-child { border-bottom: 0; }
+.type-scale .sample { color: var(--ink); line-height: 1.35; flex: 1; min-width: 0; }
+.type-scale .spec {
+  font-size: .74rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  direction: ltr;
+}
 
 /* نقل‌قول */
 .quote {

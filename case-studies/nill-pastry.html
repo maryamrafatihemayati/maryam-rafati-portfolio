@@ -82,7 +82,7 @@
         <source srcset="../assets/images/nill/nill-ui-hero.webp" type="image/webp">
         <img src="../assets/images/nill/nill-ui-hero.png"
              alt="بخش هیروی رابط نهایی شیرینی‌پزی نیل: جعبهٔ شیرینی نخودچی با روبان آبی، عنوان «نخودچی و هل» و دکمهٔ «کشف کنید»"
-             width="1980" height="813" fetchpriority="high">
+             width="1980" height="779" fetchpriority="high">
       </picture>
       <figcaption>بخش هیروی رابط نهایی. عکاسی واقعی محصول، نه تصویر مصنوعی؛ دلیل این انتخاب در بخش یافته‌ها آمده است.</figcaption>
     </figure>
@@ -110,6 +110,7 @@
       <li><a href="#hmw">چطور می‌توانیم</a></li>
       <li><a href="#ideation">ایده‌پردازی و اولویت</a></li>
       <li><a href="#design">از وایرفریم تا رابط</a></li>
+      <li><a href="#system">سیستم طراحی</a></li>
       <li><a href="#decisions">تصمیم‌ها در یک نگاه</a></li>
       <li><a href="#scope">دامنه و فاز بعد</a></li>
       <li><a href="#measure">برنامهٔ سنجش</a></li>
@@ -751,9 +752,9 @@
 
     <h3>زبان بصری</h3>
     <p>
-      پالت رنگی از خود محصول استخراج شد: شرابی عمیق برای عناصر تصمیم‌ساز و دکمه‌ها،
-      صورتی روشن برای زمینهٔ بخش‌های احساسی، و فضای خالی کافی تا تصویر محصول فضای لازم را داشته باشد.
-      تمام تصاویر واقعی هستند و هیچ تصویر تولیدشده با هوش مصنوعی به کار نرفته است؛
+      پالت رنگی از خود محصول استخراج شد و فضای خالی کافی در نظر گرفته شد تا تصویر محصول
+      فضای لازم را داشته باشد. ساختار کامل رنگ و تایپوگرافی در بخش بعد آمده است.
+      نکتهٔ مهم‌تر اینکه تمام تصاویر واقعی هستند و هیچ تصویر تولیدشده با هوش مصنوعی به کار نرفته؛
       این تصمیمی مستقیم بر پایهٔ یافتهٔ «اعتماد بصری» بود، نه یک انتخاب سلیقه‌ای.
     </p>
 
@@ -762,13 +763,110 @@
         <source srcset="../assets/images/nill/nill-ui-desktop.webp" type="image/webp">
         <img src="../assets/images/nill/nill-ui-desktop.png"
              alt="نمای کامل صفحهٔ اصلی دسکتاپ شیرینی‌پزی نیل از هدر تا فوتر"
-             loading="lazy" width="1616" height="4000">
+             loading="lazy" width="1980" height="4901">
       </picture>
       <figcaption>رابط نهایی صفحهٔ اصلی، نمای کامل نسخهٔ دسکتاپ.</figcaption>
     </figure>
   </section>
 
-  <!-- 14. تصمیم‌ها -->
+  <!-- ۱۴. سیستم طراحی -->
+  <section class="cs-section" id="system">
+    <h2>سیستم طراحی</h2>
+    <p>
+      برای اینکه طراحی در فازهای بعد قابل گسترش بماند، به‌جای انتخاب رنگ برای هر بخش،
+      یک سیستم نقش‌محور بر پایهٔ ساختار Material Design 3 تعریف کردم.
+      هر رنگ یک وظیفه دارد، نه یک محل مصرف ثابت؛ بنابراین وقتی صفحهٔ محصول یا سبد خرید ساخته شود،
+      تصمیم رنگی تازه‌ای لازم نیست.
+    </p>
+
+    <h3>رنگ‌های اصلی</h3>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip" style="background:#3b0010;color:#fff">#3b0010</div>
+        <div class="meta"><b>Primary</b><span>دکمه‌ها و عناصر تصمیم‌ساز</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#5e0821;color:#fff">#5e0821</div>
+        <div class="meta"><b>Primary Container</b><span>زمینهٔ فوتر و نواحی تیره</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#e37184;color:#2a0e15">#e37184</div>
+        <div class="meta"><b>On Primary Container</b><span>متن و نشان روی زمینهٔ تیره</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#835057;color:#fff">#835057</div>
+        <div class="meta"><b>Secondary</b><span>عناصر پشتیبان</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#ffbec5;color:#4a1a22">#ffbec5</div>
+        <div class="meta"><b>Secondary Container</b><span>دکمه‌های کم‌تأکید</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#7b4a51;color:#fff">#7b4a51</div>
+        <div class="meta"><b>On Secondary Container</b><span>متن روی زمینهٔ صورتی</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#2e1000;color:#fff">#2e1000</div>
+        <div class="meta"><b>Tertiary</b><span>تأکید گرم و مکمل</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#ba1a1a;color:#fff">#ba1a1a</div>
+        <div class="meta"><b>Error</b><span>خطا و هشدار</span></div>
+      </div>
+    </div>
+
+    <h3>سطوح و متن</h3>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip" style="background:#fff8f7;color:#23191a;border-bottom:1px solid var(--line)">#fff8f7</div>
+        <div class="meta"><b>Surface</b><span>زمینهٔ اصلی صفحه</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#fce9ea;color:#23191a;border-bottom:1px solid var(--line)">#fce9ea</div>
+        <div class="meta"><b>Surface Container</b><span>تفکیک بخش‌های احساسی</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#e8d6d7;color:#23191a;border-bottom:1px solid var(--line)">#e8d6d7</div>
+        <div class="meta"><b>Surface Dim</b><span>سطح فرورفته و مرزها</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#23191a;color:#fff8f7">#23191a</div>
+        <div class="meta"><b>On Surface</b><span>متن اصلی</span></div>
+      </div>
+    </div>
+
+    <div class="note">
+      <div>
+        <b>چرا ساختار نقش‌محور</b>
+        <p>
+          در این ساختار هر رنگ یک جفت دارد: رنگ زمینه و رنگی که روی آن می‌نشیند.
+          مثلاً هر چه روی <strong>Primary</strong> قرار بگیرد از <strong>On Primary</strong> استفاده می‌کند.
+          این کار خوانایی را از ابتدا تضمین می‌کند و جلوی ترکیب‌های کم‌کنتراست را پیش از آنکه ساخته شوند می‌گیرد.
+        </p>
+      </div>
+    </div>
+
+    <h3>تایپوگرافی</h3>
+    <p>
+      دو خانوادهٔ فونت: <strong>وزیرمتن</strong> برای فارسی و <strong>Inter</strong> برای لاتین،
+      چون نام محصولات و برچسب‌ها در این پروژه هر دو زبان را کنار هم دارند
+      و فونت فارسیِ بدون لاتینِ هماهنگ، ناهماهنگی بصری می‌سازد.
+    </p>
+
+    <div class="type-scale">
+      <div><span class="sample" style="font-size:40px;font-weight:700">نخودچی و هل</span><span class="spec">۷۲ · Bold</span></div>
+      <div><span class="sample" style="font-size:30px;font-weight:600">دنیای نیل را کشف کنید</span><span class="spec">۴۸ · SemiBold</span></div>
+      <div><span class="sample" style="font-size:23px;font-weight:600">طعم‌های تابستانه</span><span class="spec">۳۶ · SemiBold</span></div>
+      <div><span class="sample" style="font-size:20px;font-weight:400">شیرینی نخودچی</span><span class="spec">۳۲ · Regular</span></div>
+      <div><span class="sample" style="font-size:16px;font-weight:400">نخود چی اسیاب شده به همراه عصارهٔ هل</span><span class="spec">۲۴ · Regular</span></div>
+    </div>
+
+    <p class="small muted">
+      اندازه‌ها بر حسب پیکسل در فایل Figma هستند و در این جدول برای نمایش کوچک شده‌اند.
+    </p>
+  </section>
+
+  <!-- ۱۵. تصمیم‌ها -->
   <section class="cs-section" id="decisions">
     <h2>تصمیم‌ها در یک نگاه</h2>
     <p>
