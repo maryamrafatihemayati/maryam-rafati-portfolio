@@ -9,6 +9,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_URL = "https://maryamrafatihemayati.github.io/maryam-rafati-portfolio/";
+const FIGMA_FILE_KEY = "LCT64nO02nd3zQWZebhM3l";
 const PAGES = ["index.html", "case-studies/nill-pastry.html"];
 const CASE = "case-studies/nill-pastry.html";
 
@@ -175,6 +176,18 @@ describe("پیوندها و فایل‌ها", () => {
     assert.ok(html["index.html"].includes(`href="${pdf}"`));
   });
 
+  test("لینک فایل Figma در هر دو صفحه هست و در زبانهٔ تازه باز می‌شود", () => {
+    for (const page of PAGES) {
+      const links = tags(html[page], "a").filter(({ attr }) => (attr.href || "").includes("figma.com"));
+      assert.ok(links.length > 0, `${page}: لینک Figma پیدا نشد`);
+      for (const { attr } of links) {
+        assert.match(attr.href, new RegExp(`^https://www\\.figma\\.com/design/${FIGMA_FILE_KEY}/`), attr.href);
+        assert.equal(attr.target, "_blank");
+        assert.match(attr.rel || "", /noopener/);
+      }
+    }
+  });
+
   test("دادهٔ ساخت‌یافتهٔ JSON-LD معتبر است", () => {
     const block = html["index.html"].match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
     assert.ok(block, "بلوک JSON-LD پیدا نشد");
@@ -195,6 +208,15 @@ describe("کیس‌استادی", () => {
   test("حد تحمل پاسخ دایرکت ۱۲۰ دقیقه است، نه ۶۰", () => {
     assert.match(html[CASE], /۱۲۰/);
     assert.doesNotMatch(html[CASE], /۶۰\s*دقیقه/);
+  });
+
+  test("جدول تایپوگرافی همان هشت استایل فایل Figma را به ترتیب نشان می‌دهد", () => {
+    const specs = [...html[CASE].matchAll(/<span class="spec">([^<]+)<\/span>/g)].map((m) => m[1].split(" · ")[0]);
+    assert.deepEqual(specs, ["Display", "Headline", "Title/L", "Title/M", "Body/L", "Body/M", "Body/S", "Label"]);
+  });
+
+  test("ادعای قدیمی «Inter برای لاتین» برنگشته است", () => {
+    assert.doesNotMatch(html[CASE], /<strong>Inter<\/strong>/);
   });
 
   test("بخش سیستم طراحی همهٔ نقش‌های رنگی را دارد", () => {
@@ -264,7 +286,7 @@ describe("تایپوگرافی و نگارش فارسی", () => {
 
     test(`${page}: املای نادرست رایج وجود ندارد`, () => {
       const text = content(html[page]);
-      const wrong = ["نشئت", "مساله", "مسأله", "سوال", "تاخیر", "تایید", "موثر", "جزییات"].filter((w) => text.includes(w));
+      const wrong = ["نشئت", "مساله", "مسأله", "سوال", "تاخیر", "تایید", "موثر", "جزییات", "اسیاب", "نخود چی"].filter((w) => text.includes(w));
       if (/ه ی\s/.test(text)) wrong.push("کسرهٔ اضافهٔ جدا («ه ی» به‌جای «هٔ»)");
       assert.deepEqual(wrong, []);
     });
@@ -296,10 +318,19 @@ describe("تایپوگرافی و نگارش فارسی", () => {
     assert.deepEqual(offenders, []);
   });
 
-  test("فونت استعداد به‌صورت محلی و در پنج وزن بارگذاری می‌شود", () => {
-    const weights = [...css.matchAll(/@font-face\s*\{[^}]*font-weight:\s*(\d+)/g)].map((m) => m[1]);
-    assert.deepEqual(weights, ["400", "500", "600", "700", "800"]);
+  test("فونت‌ها به‌صورت محلی: استعداد در پنج وزن، وزیرمتن در چهار وزن", () => {
+    const faces = [...css.matchAll(/@font-face\s*\{([^}]*)\}/g)].map((m) => ({
+      family: m[1].match(/font-family:\s*"([^"]+)"/)[1],
+      weight: m[1].match(/font-weight:\s*(\d+)/)[1],
+    }));
+    const weightsOf = (f) => faces.filter((x) => x.family === f).map((x) => x.weight);
+    assert.deepEqual(weightsOf("Estedad"), ["400", "500", "600", "700", "800"]);
+    assert.deepEqual(weightsOf("Vazirmatn"), ["400", "500", "600", "700"]);
     assert.doesNotMatch(css, /fonts\.googleapis|cdn\./);
+  });
+
+  test("نمونه‌های تایپوگرافی پروژه با خود وزیرمتن نمایش داده می‌شوند", () => {
+    assert.match(css, /\.type-scale \.sample\s*\{[^}]*font-family:\s*"Vazirmatn"/);
   });
 });
 

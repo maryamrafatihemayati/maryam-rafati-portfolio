@@ -29,6 +29,28 @@
   font-weight: 800; font-display: swap; font-style: normal;
 }
 
+/* وزیرمتن فقط برای نمونه‌های تایپوگرافی پروژهٔ نیل؛ مرورگر تنها در صفحه‌ای که استفاده شود دانلودش می‌کند */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400; font-display: swap; font-style: normal;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 500; font-display: swap; font-style: normal;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-SemiBold.woff2") format("woff2");
+  font-weight: 600; font-display: swap; font-style: normal;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700; font-display: swap; font-style: normal;
+}
+
 /* ---------- توکن‌ها ---------- */
 :root {
   --paper:      #FAF8F5;
@@ -1029,8 +1051,11 @@ td strong { color: var(--ink); font-weight: 600; }
   background: var(--surface);
 }
 .type-scale > div:last-child { border-bottom: 0; }
-.type-scale .sample { color: var(--ink); line-height: 1.35; flex: 1; min-width: 0; }
+.type-scale .sample { font-family: "Vazirmatn", "Estedad", sans-serif; color: #23191a; line-height: 1.35; flex: 1; min-width: 0; }
+.type-scale { background: #fff8f7; }
+.type-scale > div { background: transparent; }
 .type-scale .spec {
+  font-family: "Vazirmatn", "Estedad", sans-serif;
   font-size: .74rem;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
