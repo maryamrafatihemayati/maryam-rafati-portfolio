@@ -1096,6 +1096,13 @@ td strong { color: var(--ink); font-weight: 600; }
 .cs-end p { color: var(--muted); max-width: 48ch; margin-inline: auto; margin-bottom: 1.5em; }
 .cs-end .btn-row { justify-content: center; }
 
+/* شبکه‌های کادردار: خطوط جداکننده روی خود خانه‌ها کشیده می‌شوند، نه با رنگ پس‌زمینه
+   از لای فاصله‌ها؛ وگرنه وقتی ردیف آخر ناقص است، جای خالی خاکستری دیده می‌شود */
+.meta-grid, .tldr, .journey { gap: 0; background: var(--surface); }
+.meta-grid > div, .tldr > div, .journey > div {
+  box-shadow: inset -1px 0 0 var(--line), inset 0 -1px 0 var(--line);
+}
+
 /* ظهور تدریجی */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -1103,8 +1110,15 @@ td strong { color: var(--ink); font-weight: 600; }
 
 /* چاپ */
 @media print {
-  .site-header, .cs-toc, .cs-end, .site-footer, .skip-link { display: none !important; }
+  .site-header, .cs-toc, .cs-end, .site-footer, .skip-link, .btn-row { display: none !important; }
   body { background: #fff; color: #000; }
   .cs-layout { display: block; }
   a { text-decoration: none; color: #000; }
+  /* بخش‌هایی که با اسکرول ظاهر می‌شوند در چاپ باید از اول دیده شوند */
+  .reveal { opacity: 1 !important; transform: none !important; }
+  /* رنگ نمونه‌رنگ‌ها و کارت‌ها در چاپ حذف نشود */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card, .finding, .insight, .persona, .panel, .note, .swatch, .journey > div, tr, .type-scale > div { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .hero-visual, .work-card, .figure img { box-shadow: none; }
 }
